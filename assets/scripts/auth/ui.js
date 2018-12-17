@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store.js')
 
+
 const signUpSuccess = data => {
   $('#up-message').show().text('What Games Do You Have?!')
   $('#up-message').removeClass()

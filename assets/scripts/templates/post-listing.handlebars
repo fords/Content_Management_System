@@ -1,16 +1,22 @@
-{{#each posts as |post|}}
-<h1> </h1>
-  <div id="content" class="content">
-    <p class="card-text"></p>
+{{#each blogposts as |blogpost|}}
 
-  <div class="card mb-3">
-    <img class="card-img-top" src="{{post.imgurl}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{post.title}}</h5>
-      <p class="card-text">{{post.link}}</p>
-      <p class="card-text">{{post.description}}</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+  <div class="shown-blogpost">
+    <h5 class="card-header">{{blogpost.title}}</h5>
+    <div class="card mb-3">
+      <img class="card-img-top" src="{{blogpost.img_url}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{blogpost.description}}</p>
+        <p class="card-text"><small class="text-muted">{{blogpost.time}}</small></p>
+        <p class="card-text">{{blogpost.owner}}</p>
+      </div>
+      <div class="card-footer text-right">
+        <button type="submit" class="btn btn-warning">Update</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
     </div>
-</div>
-</div>
+  </div>
+  <br>
+
+
 {{/each}}
