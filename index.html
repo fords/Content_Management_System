@@ -60,6 +60,10 @@
                         <input class="form-control" type="password" name="credentials[password]"
                        placeholder="Password">
                      </div>
+                     <div class="form-group">
+                       <input class="form-control" type="text" name="companyName"
+                      placeholder="Company Name">
+                    </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
                     <!--token-auth training-->
@@ -132,6 +136,7 @@
           <input id="show-all-websites" class="btn btn-primary" type="button" value='Show Websites'>
           <!--Show Website Data-->
           <!-- All Websites Dropdown -->
+
           <!--Create Website Modal-->
           <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
             data-target="#createWebsiteModal">Create Website</button>
@@ -201,14 +206,16 @@
       <br>
 
   <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
-      <div class="card text-center">
+      <!-- <div class="card text-center">
         <div class="card header">
           <h4>Blogpost title</h4>
         </div>
         <img class="card-img-top" src="#" alt="Card image cap">
         <div class="card-body">
           <h6>Date Created</h6>
-          <p class="card-text">Area where person can post about what they have done along with the photo above. This will be moved to a handlebars document to be altered and deleted. Business link can match which company made the post.</p>
+          <p class="card-text">Area where person can post about what they have done along with the photo above.
+             This will be moved to a handlebars document to be altered and deleted. Business link can match which
+             company made the post.</p>
           <a href="#" class="card-link">Business link</a>
         </div>
         <div class="card-footer text-right">
@@ -216,28 +223,32 @@
           <button type="submit" class="btn btn-danger">Delete</button>
         </div>
       </div>
-      <br>
+      <br> -->
+
+      <div id='blogcontent'>
+
+      </div>
   <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
 
 
-    on home page
-    Sign in/Sign up
-    Visit our Company BlogPosts/Websites--
+    on home page<br>
+    Sign in/Sign up<br>
+    Visit our Company BlogPosts/Websites--<br>
 
 
-    once user is signed in they will be brought to their dashboard (could be a pop up modal)
-    which will allow them to create their own websites and/or blog posts
-    change password and sign out would also be shown to signed in user
+    once user is signed in they will be brought to their dashboard (could be a pop up modal)<br>
+    which will allow them to create their own websites and/or blog posts<br>
+    change password and sign out would also be shown to signed in user<br>
     once they have clicked on creating a website they will be prompted to add their
-    content
-    Name of website
-    Edit site (update)
-    delete site
-    when website is clicked it will show the website layout and blog posts for that specific website
+    content<br>
+    Name of website<br>
+    Edit site (update)<br>
+    delete site<br>
+    when website is clicked it will show the website layout and blog posts for that specific website<br>
 
     if user clicks on create new blog post they will be brought to /post/new and
-    will be given fields for blog post title, description, link to img url. Then a button to submit the post.
-    once the post is submitted we could use handlebars to display the post.
+    will be given fields for blog post title, description, link to img url. Then a button to submit the post.<br>
+    once the post is submitted we could use handlebars to display the post.<br>
 
 
 

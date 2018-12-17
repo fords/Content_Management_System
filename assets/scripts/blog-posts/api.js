@@ -1,9 +1,9 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const getAllPosts = function (data) {
+const getAllPosts = function () {
   return $.ajax({
-    url: config.apiUrl + '/posts',
+    url: config.apiUrl + '/blogposts',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -12,7 +12,7 @@ const getAllPosts = function (data) {
 }
 const createPost = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/posts/',
+    url: config.apiUrl + '/blogposts/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -22,10 +22,10 @@ const createPost = function (data) {
 }
 
 const deletePost = function (data) {
-  const id = data.post.id
+  const id = data.blogpost.id
   // delete data.post.id
   return $.ajax({
-    url: config.apiUrl + '/posts/' + id,
+    url: config.apiUrl + '/blogposts/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -35,10 +35,10 @@ const deletePost = function (data) {
 }
 
 const updatePost = function (data) {
-  const id = data.post.id
+  const id = data.blogpost.id
   // delete data.post.id
   return $.ajax({
-    url: config.apiUrl + '/posts/' + id,
+    url: config.apiUrl + '/blogposts/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

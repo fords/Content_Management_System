@@ -33,16 +33,17 @@ const updatePostSuccess = data => {
   $('#change-password-form').addClass('hidden')
   $('#sign-out-button').addClass('hidden')
 }
-const getPostSuccess = data => {
+const getPostsSuccess = data => {
+  const showPostsHtml = showPostsTemplate({blogposts: data.blogposts})
   $('#message').html('Successfully updated a post')
-  const showPostsHtml = showPostsTemplate({posts: data.posts})
-  $('.content').html(showPostsHtml)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
-  $('#sign-up-form').removeClass('hidden')
-  $('#sign-in-form').removeClass('hidden')
-  $('#change-password-form').addClass('hidden')
-  $('#sign-out-button').addClass('hidden')
+  console.log('all posts shown')
+  $('.blogcontent').html(showPostsHtml)
+  // $('#message').removeClass('failure')
+  // $('#message').addClass('success')
+  // $('#sign-up-form').removeClass('hidden')
+  // $('#sign-in-form').removeClass('hidden')
+  // $('#change-password-form').addClass('hidden')
+  // $('#sign-out-button').addClass('hidden')
 }
 const failure = data => {
   $('#message').html('Oops, something went wrong, please try again')
@@ -54,7 +55,7 @@ const failure = data => {
   $('#change-password-form').removeClass('hidden')
 }
 module.exports = {
-  getPostSuccess,
+  getPostsSuccess,
   createPostSuccess,
   updatePostSuccess,
   deletePostSuccess,
