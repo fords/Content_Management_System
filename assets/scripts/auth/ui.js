@@ -1,9 +1,8 @@
 'use strict'
 const store = require('../store.js')
 
-
 const signUpSuccess = data => {
-  $('#up-message').show().text('What Games Do You Have?!')
+  $('#up-message').show().text('Sign Up Success')
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#up-message').fadeOut(5000)
