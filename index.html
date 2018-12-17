@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> Template </title>
+      <title>sserpdrow</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,8 +10,237 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
     </head>
     <body>
-      <h1> Hello World</h1>
+      <div class="btn-toolbar justify-content-between" role="toolbar">
+
+        <!-- Auth Grouping -->
+        <div class="btn-group" role="group" aria-label="auth-group">
+        <!-- Sign Up/In Modal-->
+          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#authorizationModal">Sign Up/In</button>
+
+            <div class="modal fade" id="authorizationModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="up-message"></p>
+
+                    <form id="sign-up">
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                         placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password_confirmation]"
+                         placeholder="Confirm Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign Up!</button>
+                    </form>
+                    <hr><hr>
+
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
+                    <hr><br>
+                    <form id="sign-in"> <!--id of form is used-->
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                       placeholder="Password">
+                     </div>
+                      <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Up/In Modal-->
+
+          <!-- Sign Out/PW Modal-->
+          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#optionsModal">Options</button>
+
+            <div class="modal fade" id="optionsModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="out-message"></p>
+
+                    <form id="change-password" class="form-inline">
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[old]"
+                         placeholder="OldPassword">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[new]"
+                         placeholder="New Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Change password</button>
+                    </form>
+                    <br>
+
+                    <form id="sign-out" >
+                      <button type="submit" class="btn btn-danger">Sign Out</button>
+                    </form>
+
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Out/PW Modal-->
+        </div>
+        <!-- Auth Grouping -->
+
+        <!-- Website Grouping -->
+        <div class="btn-group" role="group" aria-label="website-group">
+          <!-- All Websites Dropdown -->
+          <div class="website-dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Featured Businesses
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><span class="website-title">Website Title</span></a> <!-- website title changes along with the website title on their page -->
+            </div>
+          </div>
+
+          <!--Show Website Data-->
+          <input id="show-all-websites" class="btn btn-primary" type="button" value='Show Websites'>
+          <!--Show Website Data-->
+          <!-- All Websites Dropdown -->
+          <!--Create Website Modal-->
+          <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
+            data-target="#createWebsiteModal">Create Website</button>
+
+            <div class="modal fade" id="createWebsiteModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createWebsiteModalLabel">Create Website</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Create Website Data-->
+                    <form class="create-website">
+                      <ul>
+                        <li>/url name</li>
+                        <li>Website Title</li>
+                        <li>Website description</li>
+                        <li>Theme color range</li>
+                        <li>Theme font radio buttons</li>
+                        <li>select image</li>
+                      </ul>
+                    </form>
+                    <p id="create-message"></p>
+                    <!--Create Website Data-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Create Website Modal-->
+
+          <!--Update Website Modal-->
+          <button type="button" id="update-button" class="btn btn-danger" data-toggle="modal"
+            data-target="#updateWebsiteModal">Update Website</button>
+
+            <div class="modal fade" id="updateWebsiteModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="updateWebsiteModalLabel">Update a Website</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Update Website Data-->
+                    <form class="update-website">
+                      <fieldset>
+                      </fieldset>
+                    </form>
+                    <p id="update-message"></p>
+                    <!--Update Website Data-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Update Website Modal-->
+
+        </div>
+        <!-- Website Grouping -->
+      </div>
+      <br>
+
+      <div class="website-header">
+        <h1><span class="website-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
+        <p><span class="website-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
+      </div>
+      <img src="#" alt="Business Photo"> <!-- either image pasted here or chnage CSS background image -->
+      <br>
+
+  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
+      <div class="card text-center">
+        <div class="card header">
+          <h4>Blogpost title</h4>
+        </div>
+        <img class="card-img-top" src="#" alt="Card image cap">
+        <div class="card-body">
+          <h6>Date Created</h6>
+          <p class="card-text">Area where person can post about what they have done along with the photo above. This will be moved to a handlebars document to be altered and deleted. Business link can match which company made the post.</p>
+          <a href="#" class="card-link">Business link</a>
+        </div>
+        <div class="card-footer text-right">
+          <button type="submit" class="btn btn-warning">Update</button>
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+      <br>
+  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
+
+
+    on home page
+    Sign in/Sign up
+    Visit our Company BlogPosts/Websites--
+
+
+    once user is signed in they will be brought to their dashboard (could be a pop up modal)
+    which will allow them to create their own websites and/or blog posts
+    change password and sign out would also be shown to signed in user
+    once they have clicked on creating a website they will be prompted to add their
+    content
+    Name of website
+    Edit site (update)
+    delete site
+    when website is clicked it will show the website layout and blog posts for that specific website
+
+    if user clicks on create new blog post they will be brought to /post/new and
+    will be given fields for blog post title, description, link to img url. Then a button to submit the post.
+    once the post is submitted we could use handlebars to display the post.
+
+
+
+
     </body>
 </html>

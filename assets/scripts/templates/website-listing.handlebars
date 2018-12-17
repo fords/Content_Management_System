@@ -1,0 +1,16 @@
+{{#each websites as |website|}}
+<h1> </h1>
+  <div id="content" class="content">
+    <p class="card-text"></p>
+
+  <div class="card mb-3">
+    <img class="card-img-top" src="{{website.imgurl}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{website.title}}</h5>
+      <p class="card-text">{{website.link}}</p>
+      <p class="card-text">{{website.description}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+</div>
+</div>
+{{/each}}
