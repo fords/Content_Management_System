@@ -14,10 +14,6 @@
 
 
     </head>
-    <header>
-      <h1>Sserpdrow</h1>
-      <h4>Tagline</h4>
-    </header>
     <body>
       <div class="btn-toolbar justify-content-between" role="toolbar">
 
@@ -25,13 +21,13 @@
         <div class="btn-group" role="group" aria-label="auth-group">
         <!-- Sign Up/In Modal-->
           <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#authorizationModal"><span>Sign Up/In</span></button>
+            data-target="#authorizationModal">Sign Up/In</button>
 
             <div class="modal fade" id="authorizationModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel"><span>Sign Up/In</span></h5>
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
@@ -52,9 +48,11 @@
                       </div>
                       <button type="submit" class="btn btn-primary">Sign Up!</button>
                     </form>
-                    <br>
+                    <hr><hr>
 
-                    <form id="sign-in" > <!--id of form is used-->
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
+                    <hr><br>
+                    <form id="sign-in"> <!--id of form is used-->
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                       </div>
@@ -67,7 +65,7 @@
                     <!--token-auth training-->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -76,36 +74,40 @@
 
           <!-- Sign Out/PW Modal-->
           <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#optionsModal"><span>Options</span></button>
+            data-target="#optionsModal">Options</button>
 
             <div class="modal fade" id="optionsModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="optionsModalLabel"><span>Options</span></h5>
+                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
                     <!--token-auth training-->
                     <p id="out-message"></p>
 
-                    <form id="change-password" >
-                      <input type="password" name="passwords[old]" placeholder="Old Password"><br/>
-                      <input type="password" name="passwords[new]"
-                       placeholder="New Password"><br/>
-                      <input type="submit" value="Change password">
+                    <form id="change-password" class="form-inline">
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[old]"
+                         placeholder="OldPassword">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[new]"
+                         placeholder="New Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
+                    <br>
 
                     <form id="sign-out" >
-                      <fieldset>
-                          <input type="submit" value="Sign Out">
-                      </fieldset>
+                      <button type="submit" class="btn btn-danger">Sign Out</button>
                     </form>
 
                     <!--token-auth training-->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -116,6 +118,16 @@
 
         <!-- Website Grouping -->
         <div class="btn-group" role="group" aria-label="website-group">
+          <!-- All Websites Dropdown -->
+          <div class="website-dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Featured Businesses
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><span class="website-title">Website Title</span></a> <!-- website title changes along with the website title on their page -->
+            </div>
+          </div>
+          <!-- All Websites Dropdown -->
           <!--Create Website Modal-->
           <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
             data-target="#createWebsiteModal">Create Website</button>
@@ -130,7 +142,14 @@
                   <div class="modal-body">
                     <!--Create Website Data-->
                     <form class="create-website">
-                      <input type="submit" value="Submit">
+                      <ul>
+                        <li>/url name</li>
+                        <li>Website Title</li>
+                        <li>Website description</li>
+                        <li>Theme color range</li>
+                        <li>Theme font radio buttons</li>
+                        <li>select image</li>
+                      </ul>
                     </form>
                     <p id="create-message"></p>
                     <!--Create Website Data-->
@@ -174,44 +193,33 @@
       </div>
       <br>
 
-      <!-- Create Blog Modal -->
-      <div class="modal fade" id="createBlogpostModal" tabindex="-1" role="dialog" aria-labelledby="blogpostModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h4 class="modal-title w-100 font-weight-bold">New Blog Post</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body mx-3">
+      <div class="website-header">
+        <h1><span class="website-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
+        <p><span class="website-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
+      </div>
+      <img src="#" alt="Business Photo"> <!-- either image pasted here or chnage CSS background image -->
+      <br>
 
-              <div class="md-form mb-5">
-                <label data-error="wrong" data-success="right">Blog Title</label>
-                <input type="text" class="form-control validate">
-              </div>
-
-              <div class="md-form">
-                <label data-error="wrong" data-success="right">Blog Description</label>
-                <textarea type="text" class="md-textarea form-control" rows="4"></textarea>
-              </div>
-
-              <div class="custom-file">
-                <label class="custom-file-label">Choose Image</label>
-                <input type="file" class="custom-file-input">
-              </div>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-primary">Post</button>
-            </div>
-          </div>
+  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
+      <div class="card text-center">
+        <div class="card header">
+          <h4>Blogpost title</h4>
+        </div>
+        <img class="card-img-top" src="#" alt="Card image cap">
+        <div class="card-body">
+          <h6>Date Created</h6>
+          <p class="card-text">Area where person can post about what they have done along with the photo above. This will be moved to a handlebars document to be altered and deleted. Business link can match which company made the post.</p>
+          <a href="#" class="card-link">Business link</a>
+        </div>
+        <div class="card-footer text-right">
+          <button type="submit" class="btn btn-warning">Update</button>
+          <button type="submit" class="btn btn-danger">Delete</button>
         </div>
       </div>
+      <br>
+  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
 
-    <div class="text-center">
-      <a href="" class="btn btn-primary btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm">New Blog Post</a>
-    </div>
+
     on home page
     Sign in/Sign up
     Visit our Company BlogPosts/Websites--
