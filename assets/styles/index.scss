@@ -1,1 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+
+// hidden: options, create, update website, delete post
+#options-button,
+#create-button,
+#update-button,
+#blogpost-actions {
+  visibility: hidden;
+}
+
+.jumbotron {
+  background-color: skyblue;
+}
