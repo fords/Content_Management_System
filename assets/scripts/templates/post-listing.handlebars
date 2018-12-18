@@ -2,7 +2,8 @@
 
 
   <div class="shown-blogpost">
-    <h5 class="card-header">{{blogpost.title}}</h5>
+    <h5 data-id="{{blogpost.id}}" class="card-header">{{blogpost.title}}</h5>
+    <section data-id="{{blogpost.id}}">
     <div class="card mb-3">
       <img class="card-img-top" src="{{blogpost.img_url}}" alt="Card image cap">
       <div class="card-body">
@@ -10,11 +11,12 @@
         <p class="card-text"><small class="text-muted">{{blogpost.time}}</small></p>
         <p class="card-text">{{blogpost.owner}}</p>
       </div>
-      <div class="card-footer text-right">
+      <div id="blogpost-actions" class="card-footer text-right">
         <button type="submit" class="btn btn-warning">Update</button>
         <button type="submit" class="btn btn-danger">Delete</button>
       </div>
     </div>
+    </section>
   </div>
   <br>
 
