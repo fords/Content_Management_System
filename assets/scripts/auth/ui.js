@@ -57,6 +57,8 @@ const signOutSuccess = data => {
   // $('.current-player').hide()
   $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
   $('#sign-up-button').show() // sign up appears
+  $('#create-button').css('visibility', 'hidden')
+  $('#update-button').css('visibility', 'hidden')
   $('#optionsModal').modal('hide') // closes modal after success
 }
 
