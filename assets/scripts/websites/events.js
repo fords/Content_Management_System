@@ -14,6 +14,7 @@ const onGetAllWebsite = () => {
 const onCreateWebsite = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log(data)
   $(event.target).trigger('reset')
   api.createWebsite(data)
     .then(ui.createWebsiteSuccess) // if your request was succesful

@@ -15,4 +15,5 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#show-all-websites').on('click', blogpostsEvents.onGetAllPost)
+  $('#create-website').on('submit', websiteEvents.onCreateWebsite)
 })
