@@ -16,7 +16,7 @@ const onCreateBlogpost = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  console.log('create = ' + data)
+  console.log()
   api.createPost(data)
     .then(ui.createPostSuccess) // if your request was succesful
     .catch(ui.failure) // if your request failed
