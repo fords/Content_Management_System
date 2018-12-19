@@ -124,29 +124,14 @@
         </div>
         <!-- Auth Grouping -->
 
-        <!-- Website Grouping -->
+      <!-- Website Grouping -->
         <div class="btn-group" role="group" aria-label="website-group">
-          <!-- All Websites Dropdown -->
-          <div class="website-dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Featured Businesses
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><span class="website-title">Website Title</span></a> <!-- website title changes along with the website title on their page -->
-            </div>
-          </div>
 
-          <!--Show Website Data-->
+        <!--Show Website Data-->
           <input id="show-all-websites" class="btn btn-primary" type="button" value='Show Websites'>
-          <!--Show Website Data-->
+        <!--Show Website Data-->
 
-          <!--Show Blogpost Data-->
-          <input id="show-all-blogposts" class="btn btn-primary" type="button" value='Show Blogposts'>
-          <!--Show Blogpost Data-->
-
-          <!-- All Websites Dropdown -->
-
-          <!--Create Website Modal-->
+        <!--Create Website Modal-->
           <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
             data-target="#createWebsiteModal">Create Website</button>
 
@@ -158,7 +143,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!-- Create Website Form -->
+                  <!-- Create Website Form -->
                     <p id="create-message"></p>
 
                     <form id="create-website">
@@ -176,57 +161,68 @@
 
                       <button type="submit" class="btn btn-primary">Create Website</button>
                     </form>
-                    <!-- Create Website Form -->
+                  <!-- Create Website Form -->
                   </div>
                 </div>
               </div>
             </div>
-          <!--Create Website Modal-->
-          <!--Create Blogpost Modal-->
-          <button type="button" id="create-blogpost-button" class="btn btn-success" data-toggle="modal"
-            data-target="#createBlogpostModal">Create Blogpost</button>
+        <!--Create Website Modal-->
 
-            <div class="modal fade" id="createBlogpostModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="createBlogpostModalLabel">Create Blogpost</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Create Blogpost Form -->
-                    <p id="create-message"></p>
-
-                    <form id="create-blogpost">
-                      <div class="form-group">
-                        <input class="form-control" type="string" name="title" placeholder="Blogpost Title">
-                      </div>
-                      <div class="form-group">
-                        <input type="file" class="form-control-file" name="img_url" placeholder="Add your image">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="string" name="description"
-                         placeholder="Blogpost Description">
-
-                      </div>
-                      <button type="submit" class="btn btn-primary">Create Blogpost</button>
-                    </form>
-                    <!-- Create Blogpost Form -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Create Blogpost Modal-->
-
-
-        <!-- Website Grouping -->
       </div>
       <br>
+    <!-- Website Grouping -->
+
+
+    <div class="btn-group" role="group" aria-label="blogpost-group">
+
+    <!--Show Blogpost Data-->
+      <input id="show-all-blogposts" class="btn btn-primary" type="button" value='Show Blogposts'>
+    <!--Show Blogpost Data-->
+
+    <!--Create Blogpost Modal-->
+      <button type="button" id="create-blogpost-button" class="btn btn-success" data-toggle="modal"
+        data-target="#createBlogpostModal">Create Blogpost</button>
+
+        <div class="modal fade" id="createBlogpostModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="createBlogpostModalLabel">Create Blogpost</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <!-- Create Blogpost Form -->
+                <p id="create-message"></p>
+
+                <form id="create-blogpost">
+                  <div class="form-group">
+                    <input class="form-control" type="string" name="title" placeholder="Blogpost Title">
+                  </div>
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" name="img_url" placeholder="Add your image">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="string" name="description"
+                     placeholder="Blogpost Description">
+
+                  </div>
+                  <button type="submit" class="btn btn-primary">Create Blogpost</button>
+                </form>
+                <!-- Create Blogpost Form -->
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Create Blogpost Modal-->
+    </div>
+    <br>
+  <!-- Blogpost Grouping -->
+</div>
 
       <div class="jumbotron">
-        <h1><span class="website-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
-        <p><span class="website-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
-        <img class="float-right" src="#" alt="Business Photo"> <!-- either image pasted here or chnage CSS background image -->
+          <h1><span class="website-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
+          <p><span class="website-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
+          <img class="float-right" src="#" alt="Business Photo"> <!-- either image pasted here or chnage CSS background image -->
       </div>
       <br>
 
