@@ -16,4 +16,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#show-all-websites').on('click', websiteEvents.onGetAllWebsites)
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
+  $('#show-all-blogposts').on('click', blogpostsEvents.onGetAllBlogposts)
+  $('#create-blogpost').on('submit', blogpostsEvents.onCreateBlogpost)
 })

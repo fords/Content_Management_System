@@ -2,6 +2,8 @@ const store = require('../store.js')
 const showPostsTemplate = require('../templates/post-listing.handlebars')
 
 const createPostSuccess = data => {
+  $('#create-message').html('Successfully created a blogpost')
+
   $('#message').html('Successfully created a post')
   $('#message').removeClass('failure')
   $('#message').addClass('success')
@@ -37,7 +39,7 @@ const getPostsSuccess = data => {
   const showPostsHtml = showPostsTemplate({blogposts: data.blogposts})
   $('#message').html('Successfully updated a post')
   console.log('all posts shown')
-  $('.blogcontent').html(showPostsHtml)
+  $('.content').html(showPostsHtml)
   // $('#message').removeClass('failure')
   // $('#message').addClass('success')
   // $('#sign-up-form').removeClass('hidden')
