@@ -35,7 +35,6 @@ const updateWebsiteSuccess = data => {
   $('#sign-out-button').addClass('hidden')
 }
 const getWebsiteSuccess = data => {
-  $('#message').html('Successfully updated a website')
   const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
   $('.content').html(showWebsitesHtml)
   // $('#message').append(data)

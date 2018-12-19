@@ -1,7 +1,7 @@
 {{#each websites as |website|}}
-<h1> </h1>
-  <div id="content" class="content">
-    <p class="card-text"></p>
+<!-- <h1> </h1>
+  <div id="content" class="content"> -->
+    <!-- <p class="card-text"></p>
 
   <div class="card mb-3">
     <img class="card-img-top" src="{{website.imgurl}}" alt="Card image cap">
@@ -12,5 +12,24 @@
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
 </div>
-</div>
+</div> -->
+
+
+  <div class="shown-website">
+    <h5 data-id="{{website.id}}" class="card-header">{{website.title}}</h5>
+    <section data-id="{{website.id}}">
+    <div class="card mb-3">
+      <!-- <img class="card-img-top" src="{{blogpost.img_url}}" alt="Card image cap"> -->
+      <div class="card-body">
+        <p class="card-text">{{website.description}}</p>
+        <p class="card-text">{{website.name}}</p>
+      </div>
+      <div id="website-actions" class="card-footer text-right">
+        <button type="submit" class="btn btn-warning">Update</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+    </section>
+  </div>
+  <br>
 {{/each}}
