@@ -35,11 +35,11 @@ const updatePostSuccess = data => {
   $('#change-password-form').addClass('hidden')
   $('#sign-out-button').addClass('hidden')
 }
-const getPostsSuccess = data => {
+const getPostSuccess = data => {
   const showPostsHtml = showPostsTemplate({blogposts: data.blogposts})
+  console.log(data.blogposts)
   $('#message').html('Successfully updated a post')
-  console.log('all posts shown')
-  $('.content').html(showPostsHtml)
+  $('.blogcontent').html(showPostsHtml)
   // $('#message').removeClass('failure')
   // $('#message').addClass('success')
   // $('#sign-up-form').removeClass('hidden')
@@ -57,7 +57,7 @@ const failure = data => {
   $('#change-password-form').removeClass('hidden')
 }
 module.exports = {
-  getPostsSuccess,
+  getPostSuccess,
   createPostSuccess,
   updatePostSuccess,
   deletePostSuccess,
