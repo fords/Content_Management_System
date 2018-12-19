@@ -11,8 +11,9 @@ const getAllWebsites = function (data) {
   })
 }
 const createWebsite = function (data) {
+  console.log('api = ' + data)
   return $.ajax({
-    url: config.apiUrl + '/websites/',
+    url: config.apiUrl + '/websites',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token

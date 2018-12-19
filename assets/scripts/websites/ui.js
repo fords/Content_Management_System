@@ -4,11 +4,10 @@ const showWebsitesTemplate = require('../templates/website-listing.handlebars')
 // messages for user
 
 const createWebsiteSuccess = data => {
-  $('#message').html('Successfully created a website')
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
-  $('#sign-up-form').addClass('hidden')
-  $('#change-password-form').hide()
+  console.log('Created Website')
+  $('#create-message').html('Successfully created a website')
+  // $('#message').removeClass('failure')
+  // $('#message').addClass('success')
 }
 
 const deleteWebsiteSuccess = data => {

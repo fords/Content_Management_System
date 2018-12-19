@@ -18,6 +18,7 @@ const signUpFailure = () => { // removed error parameter
 
 const signInSuccess = data => {
   store.user = data.user
+  console.log(data)
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
