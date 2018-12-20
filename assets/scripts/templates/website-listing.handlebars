@@ -1,5 +1,5 @@
 {{#each websites as |website|}}
-  {{log website}}
+
 
   <div class="shown-website">
     <h5 data-id="{{website._id}}" class="card-header">{{website.title}}</h5>
@@ -11,7 +11,7 @@
         <p class="card-text">{{website.company}}</p>
       </div>
       <div id="website-actions" class="card-footer text-right">
-        <button type="button" id="update-button" class="btn btn-primary" data-toggle="modal"
+        <button type="button" class="btn btn-primary" data-toggle="modal"
           data-target="#updateModal{{website._id}}">Update</button>
 
           <div class="modal fade" id="updateModal{{website._id}}">
@@ -26,9 +26,6 @@
                   <p id="update-website-message"></p>
 
                   <form class="update-website-form">
-                    <!-- <div class="form-group">
-                      <input type="text" readonly class="form-control" name="website[id]" value="{{website._id}}">
-                    </div> -->
                     <div class="form-group">
                       <input class="form-control" type="text" name="website[title]"
                        placeholder="Website Title">
@@ -50,6 +47,7 @@
               </div>
             </div>
           </div>
+        <!-- update website form -->
         <button type="submit" class="btn btn-danger">Delete</button>
       </div>
     </div>

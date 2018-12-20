@@ -28,8 +28,8 @@ const deleteBlog = function (blogId) {
   })
 }
 
-const updateBlog = function (data) {
-  const id = data.blog.id
+const updateBlog = function (blogId, data) {
+  const id = blogId
   return $.ajax({
     url: config.apiUrl + '/blogs/' + id,
     method: 'PATCH',

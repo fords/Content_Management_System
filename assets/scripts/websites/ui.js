@@ -1,4 +1,3 @@
-// const store = require('../store.js')
 const showWebsitesTemplate = require('../templates/website-listing.handlebars')
 
 const createWebsiteSuccess = data => {
@@ -11,6 +10,7 @@ const deleteWebsiteSuccess = data => {
 
 const updateWebsiteSuccess = data => {
   $('#update-website-message').html('Successfully updated a website!')
+  $('.modal').modal('hide') // closes modal after success
 }
 
 const getWebsiteSuccess = data => {
