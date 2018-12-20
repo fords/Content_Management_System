@@ -165,50 +165,49 @@
     <!-- Website Grouping -->
 
 
-    <div class="btn-group" role="group" aria-label="blogpost-group">
+    <div class="btn-group" role="group" aria-label="blog-group">
 
-    <!--Show Blogpost Data-->
-      <input id="show-all-blogposts" class="btn btn-primary" type="button" value='Show Blogposts'>
-    <!--Show Blogpost Data-->
+    <!--Show Blog Data-->
+      <input id="show-all-blogs" class="btn btn-primary" type="button" value='Show Blogs'>
+    <!--Show Blog Data-->
 
-    <!--Create Blogpost Modal-->
-      <button type="button" id="create-blogpost-button" class="btn btn-primary" data-toggle="modal"
-        data-target="#createBlogpostModal">Create Blogpost</button>
+    <!--Create Blog Modal-->
+      <button type="button" id="create-blog-button" class="btn btn-primary" data-toggle="modal"
+        data-target="#createBlogModal">Create Blog</button>
 
-        <div class="modal fade" id="createBlogpostModal">
+        <div class="modal fade" id="createBlogModal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="createBlogpostModalLabel">Create Blogpost</h5>
+                <h5 class="modal-title" id="createBlogModalLabel">Create Blog</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
               </div>
               <div class="modal-body">
-                <!-- Create Blogpost Form -->
-                <p id="create-blogpost-message"></p>
+                <!-- Create Blog Form -->
+                <p id="create-blog-message"></p>
 
-                <form id="create-blogpost">
+                <form id="create-blog">
                   <div class="form-group">
-                    <input class="form-control" type="string" name="blogposts[title]" placeholder="Blogpost Title">
+                    <input class="form-control" type="text" name="blogs[title]" placeholder="Blog Title">
                   </div>
+                  <!-- <div class="form-group">
+                    <input type="file" class="form-control-file" name="blogs[img_url]" placeholder="Add your image">
+                  </div> -->
                   <div class="form-group">
-                    <input type="file" class="form-control-file" name="blogposts[img_url]" placeholder="Add your image">
+                    <input class="form-control" type="text" name="blogs[text]"
+                     placeholder="Blog Text">
                   </div>
-                  <div class="form-group">
-                    <input class="form-control" type="string" name="blogposts[description]"
-                     placeholder="Blogpost Description">
-
-                  </div>
-                  <button type="submit" class="btn btn-secondary">Create Blogpost</button>
+                  <button type="submit" class="btn btn-secondary">Create Blog</button>
                 </form>
-                <!-- Create Blogpost Form -->
+                <!-- Create Blog Form -->
               </div>
             </div>
           </div>
         </div>
-      <!--Create Blogpost Modal-->
+      <!--Create Blog Modal-->
     </div>
     <br>
-  <!-- Blogpost Grouping -->
+  <!-- Blog Grouping -->
 </div>
 
       <div class="jumbotron">
@@ -221,7 +220,7 @@
 
 
       <div class='website-content'></div>
-      <div class="blogpost-content"></div>
+      <div class="blog-content"></div>
 
 
     </body>
