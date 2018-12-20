@@ -19,7 +19,7 @@ $(() => {
   $('#show-all-websites').on('click', websiteEvents.onGetAllWebsites)
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
   $('.website-content').on('click', '.btn-danger', websiteEvents.onDeleteWebsite)
-  $('.website-content').on('click', '.btn-warning', websiteEvents.onUpdateWebsite)
+  $('.website-content').on('submit', websiteEvents.onUpdateWebsite)
 
   // Blogs
   $('#show-all-blogs').on('click', blogEvents.onGetAllBlogs)

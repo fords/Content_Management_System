@@ -32,8 +32,10 @@ const deleteWebsite = function (websiteId) {
   })
 }
 
-const updateWebsite = function (data) {
-  const id = data.website.id
+const updateWebsite = function (websiteId, data) {
+  console.log(data)
+  console.log(websiteId)
+  const id = websiteId
   // delete data.website.id
   return $.ajax({
     url: config.apiUrl + '/websites/' + id,
