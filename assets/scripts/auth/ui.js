@@ -23,6 +23,7 @@ const signInSuccess = data => {
   $('#options-button').css('visibility', 'visible') // show options button
   $('#create-button').css('visibility', 'visible')
   $('#update-button').css('visibility', 'visible')
+  $('#blogpost-actions').css('visibility', 'visible')
   $('#sign-up-button').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
 }

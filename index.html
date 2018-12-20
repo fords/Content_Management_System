@@ -46,10 +46,6 @@
                         <input class="form-control" type="password" name="credentials[password_confirmation]"
                          placeholder="Confirm Password">
                       </div>
-                      <div class="form-group">
-                        <input class="form-control" type="string" name="companyName"
-                       placeholder="Company Name">
-                     </div>
                       <button type="submit" class="btn btn-primary">Sign Up!</button>
                     </form>
                     <hr><hr>
@@ -64,10 +60,6 @@
                         <input class="form-control" type="password" name="credentials[password]"
                        placeholder="Password">
                      </div>
-                     <div class="form-group">
-                       <input class="form-control" type="string" name="companyName"
-                      placeholder="Company Name">
-                    </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
                     <!--token-auth training-->
@@ -128,7 +120,7 @@
         <div class="btn-group" role="group" aria-label="website-group">
 
         <!--Show Website Data-->
-          <input id="show-all-websites" class="btn btn-primary" type="button" value='Show Websites'>
+          <input id="show-all-websites" class="btn btn-success" type="button" value='Show Websites'>
         <!--Show Website Data-->
 
         <!--Create Website Modal-->
@@ -144,22 +136,22 @@
                   </div>
                   <div class="modal-body">
                   <!-- Create Website Form -->
-                    <p id="create-message"></p>
+                    <p id="create-website-message"></p>
 
                     <form id="create-website">
                       <div class="form-group">
-                        <input class="form-control" type="string" name="companyName"
-                         placeholder="Company Name">
+                        <input class="form-control" type="text" name="website[title]"
+                         placeholder="Title">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type="string" name="title" placeholder="Website Title">
+                        <input class="form-control" type="text" name="website[company]" placeholder="Company Name">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type="string" name="description"
-                         placeholder="Website Description">
+                        <input class="form-control" type="text" name="website[text]"
+                         placeholder="Website text">
                       </div>
 
-                      <button type="submit" class="btn btn-primary">Create Website</button>
+                      <button type="submit" class="btn btn-secondary">Create Website</button>
                     </form>
                   <!-- Create Website Form -->
                   </div>
@@ -173,108 +165,62 @@
     <!-- Website Grouping -->
 
 
-    <div class="btn-group" role="group" aria-label="blogpost-group">
+    <div class="btn-group" role="group" aria-label="blog-group">
 
-    <!--Show Blogpost Data-->
-      <input id="show-all-blogposts" class="btn btn-primary" type="button" value='Show Blogposts'>
-    <!--Show Blogpost Data-->
+    <!--Show Blog Data-->
+      <input id="show-all-blogs" class="btn btn-primary" type="button" value='Show Blogs'>
+    <!--Show Blog Data-->
 
-    <!--Create Blogpost Modal-->
-      <button type="button" id="create-blogpost-button" class="btn btn-success" data-toggle="modal"
-        data-target="#createBlogpostModal">Create Blogpost</button>
+    <!--Create Blog Modal-->
+      <button type="button" id="create-blog-button" class="btn btn-primary" data-toggle="modal"
+        data-target="#createBlogModal">Create Blog</button>
 
-        <div class="modal fade" id="createBlogpostModal">
+        <div class="modal fade" id="createBlogModal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="createBlogpostModalLabel">Create Blogpost</h5>
+                <h5 class="modal-title" id="createBlogModalLabel">Create Blog</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
               </div>
               <div class="modal-body">
-                <!-- Create Blogpost Form -->
-                <p id="create-message"></p>
+                <!-- Create Blog Form -->
+                <p id="create-blog-message"></p>
 
-                <form id="create-blogpost">
+                <form id="create-blog">
                   <div class="form-group">
-                    <input class="form-control" type="string" name="title" placeholder="Blogpost Title">
+                    <input class="form-control" type="text" name="blog[title]" placeholder="Blog Title">
                   </div>
+                  <!-- <div class="form-group">
+                    <input type="file" class="form-control-file" name="blog[img_url]" placeholder="Add your image">
+                  </div> -->
                   <div class="form-group">
-                    <input type="file" class="form-control-file" name="img_url" placeholder="Add your image">
+                    <input class="form-control" type="text" name="blog[text]"
+                     placeholder="Blog Text">
                   </div>
-                  <div class="form-group">
-                    <input class="form-control" type="string" name="description"
-                     placeholder="Blogpost Description">
-
-                  </div>
-                  <button type="submit" class="btn btn-primary">Create Blogpost</button>
+                  <button type="submit" class="btn btn-secondary">Create Blog</button>
                 </form>
-                <!-- Create Blogpost Form -->
+                <!-- Create Blog Form -->
               </div>
             </div>
           </div>
         </div>
-      <!--Create Blogpost Modal-->
+      <!--Create Blog Modal-->
     </div>
     <br>
-  <!-- Blogpost Grouping -->
+  <!-- Blog Grouping -->
 </div>
 
       <div class="jumbotron">
-          <h1><span class="website-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
-          <p><span class="website-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
+          <h1><span class="jumbotron-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
+          <p><span class="jumbotron-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
           <img class="float-right" src="#" alt="Business Photo"> <!-- either image pasted here or chnage CSS background image -->
       </div>
       <br>
 
-  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
-      <!-- <div class="card text-center">
-        <div class="card header">
-          <h4>Blogpost title</h4>
-        </div>
-        <img class="card-img-top" src="#" alt="Card image cap">
-        <div class="card-body">
-          <h6>Date Created</h6>
-          <p class="card-text">Area where person can post about what they have done along with the photo above.
-             This will be moved to a handlebars document to be altered and deleted. Business link can match which
-             company made the post.</p>
-          <a href="#" class="card-link">Business link</a>
-        </div>
-        <div class="card-footer text-right">
-          <button type="submit" class="btn btn-warning">Update</button>
-          <button type="submit" class="btn btn-danger">Delete</button>
-        </div>
-      </div>
-      <br> -->
 
 
-
-
-      <div class='content'>
-
-      </div>
-  <!-- Blog Post example On Main Web, will be moved into handlebars doc -->
-
-
-    on home page<br>
-    Sign in/Sign up<br>
-    Visit our Company BlogPosts/Websites--<br>
-
-
-    once user is signed in they will be brought to their dashboard (could be a pop up modal)<br>
-    which will allow them to create their own websites and/or blog posts<br>
-    change password and sign out would also be shown to signed in user<br>
-    once they have clicked on creating a website they will be prompted to add their
-    content<br>
-    Name of website<br>
-    Edit site (update)<br>
-    delete site<br>
-    when website is clicked it will show the website layout and blog posts for that specific website<br>
-
-    if user clicks on create new blog post they will be brought to /post/new and
-    will be given fields for blog post title, description, link to img url. Then a button to submit the post.<br>
-    once the post is submitted we could use handlebars to display the post.<br>
-
-
+      <div class='website-content'></div>
+      <div class="blog-content"></div>
 
 
     </body>

@@ -1,0 +1,26 @@
+{{#each blogs as |blog|}}
+  {{log blog}}
+
+
+  <div class="shown-blog">
+    <h5 data-id="{{blog._id}}" class="card-header">{{blog.title}}</h5>
+    <section data-id="{{blog._id}}">
+    <div class="card mb-3">
+      <!-- <img class="card-img-top" src="{{blog.img_url}}" alt="Card image cap"> -->
+      <div class="card-body">
+        <p id="blog-message"></p>
+        <p class="card-text">{{blog.text}}</p>
+        <!-- <p class="card-text"><small class="text-muted">{{blog.time}}</small></p> -->
+        <p class="card-text">{{blog.owner}}</p>
+      </div>
+      <div id="blog-actions" class="card-footer text-right">
+        <button type="submit" class="btn btn-warning">Update</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+    </section>
+  </div>
+  <br>
+
+
+{{/each}}

@@ -1,18 +1,18 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const getAllWebsites = function () {
+const getAllBlogs = function () {
   return $.ajax({
-    url: config.apiUrl + '/websites',
+    url: config.apiUrl + '/blogs',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
-const createWebsite = function (data) {
+const createBlog = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/websites/',
+    url: config.apiUrl + '/blogs/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -21,10 +21,10 @@ const createWebsite = function (data) {
   })
 }
 
-const deleteWebsite = function (websiteId) {
-  console.log(websiteId)
+const deleteBlog = function (blogId) {
+  console.log(blogId)
   return $.ajax({
-    url: config.apiUrl + '/websites/' + websiteId,
+    url: config.apiUrl + '/blogs/' + blogId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -32,11 +32,10 @@ const deleteWebsite = function (websiteId) {
   })
 }
 
-const updateWebsite = function (data) {
-  const id = data.website.id
-  // delete data.website.id
+const updateBlog = function (data) {
+  const id = data.blog.id
   return $.ajax({
-    url: config.apiUrl + '/websites/' + id,
+    url: config.apiUrl + '/blogs/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -46,8 +45,8 @@ const updateWebsite = function (data) {
 }
 
 module.exports = {
-  createWebsite,
-  getAllWebsites,
-  updateWebsite,
-  deleteWebsite
+  createBlog,
+  getAllBlogs,
+  updateBlog,
+  deleteBlog
 }
