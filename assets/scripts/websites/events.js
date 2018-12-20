@@ -12,11 +12,11 @@ const onCreateWebsite = event => {
     .catch(ui.failure) // if your request failed
 }
 
-const onGetAllWebsites = () => {
+const onGetAllWebsites = event => {
   event.preventDefault()
-  // const data = getFormFields(event.target)
+  const data = getFormFields(event.target)
   console.log('button clicked')
-  api.getAllWebsites()
+  api.getAllWebsites(data)
     .then(ui.getWebsiteSuccess)
     .catch(ui.failure) // if your request failed
 }
