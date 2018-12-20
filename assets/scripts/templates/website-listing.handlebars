@@ -2,10 +2,11 @@
   {{log website}}
 
   <div class="shown-website">
-    <h5 data-id="{{website.id}}" class="card-header">{{website.title}}</h5>
+    <h5 data-id="{{website._id}}" class="card-header">{{website.title}}</h5>
     <section data-id="{{website.id}}">
     <!-- <div class="card mb-3"> -->
       <div class="card-body">
+        <p id='message'></p>
         <p class="card-text">{{website.description}}</p>
         <p class="card-text">{{website.companyName}}</p>
       </div>
