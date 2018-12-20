@@ -2,12 +2,10 @@
 const showBlogsTemplate = require('../templates/blog-listing.handlebars')
 
 const createBlogSuccess = data => {
-  console.log('Created Blog')
   $('#create-blog-message').html('Successfully created a blog')
 }
 
 const createBlogFailure = data => {
-  console.log('Failed to create')
 }
 
 const deleteBlogSuccess = data => {

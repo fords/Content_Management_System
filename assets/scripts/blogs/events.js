@@ -5,7 +5,6 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const onGetAllBlogs = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.getAllBlogs(data)
     .then(ui.getBlogSuccess)
     .catch(ui.failure) // if your request failed
@@ -16,7 +15,6 @@ const onCreateBlog = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  console.log(data)
   api.createBlog(data)
     .then(ui.createBlogSuccess) // if your request was succesful
     .catch(ui.failure) // if your request failed

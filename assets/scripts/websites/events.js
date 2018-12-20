@@ -5,7 +5,6 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const onCreateWebsite = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   $(event.target).trigger('reset')
   api.createWebsite(data)
     .then(ui.createWebsiteSuccess) // if your request was succesful
@@ -15,7 +14,6 @@ const onCreateWebsite = event => {
 const onGetAllWebsites = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('button clicked')
   api.getAllWebsites(data)
     .then(ui.getWebsiteSuccess)
     .catch(ui.failure) // if your request failed
@@ -24,9 +22,7 @@ const onGetAllWebsites = event => {
 const onUpdateWebsite = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   const websiteId = $(event.target).closest('section').data('id')
-  console.log(websiteId)
   api.updateWebsite(websiteId, data)
     .then(ui.updateWebsiteSuccess) // if your request was succesful
     .catch(ui.failure) // if your request failed
@@ -36,7 +32,6 @@ const onUpdateWebsite = event => {
 const onDeleteWebsite = event => {
   event.preventDefault()
   const websiteId = $(event.target).closest('section').data('id')
-  console.log(websiteId)
   api.deleteWebsite(websiteId)
     .then(() => onGetAllWebsites(event)) // if your request was succesful
     .then(ui.deleteWebsiteSuccess)

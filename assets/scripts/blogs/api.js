@@ -4,10 +4,7 @@ const store = require('../store.js')
 const getAllBlogs = function () {
   return $.ajax({
     url: config.apiUrl + '/blogs',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
+    method: 'GET'
   })
 }
 const createBlog = function (data) {
@@ -22,7 +19,6 @@ const createBlog = function (data) {
 }
 
 const deleteBlog = function (blogId) {
-  console.log(blogId)
   return $.ajax({
     url: config.apiUrl + '/blogs/' + blogId,
     method: 'DELETE',

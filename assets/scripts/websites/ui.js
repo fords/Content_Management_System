@@ -2,7 +2,6 @@
 const showWebsitesTemplate = require('../templates/website-listing.handlebars')
 
 const createWebsiteSuccess = data => {
-  console.log('Created Website')
   $('#create-website-message').html('Successfully created a website')
 }
 
