@@ -18,9 +18,11 @@ $(() => {
   // Websites
   $('#show-all-websites').on('click', websiteEvents.onGetAllWebsites)
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
-  $('.website-content').on('click', 'button', websiteEvents.onDeleteWebsite)
+  $('.website-content').on('click', '.btn-danger', websiteEvents.onDeleteWebsite)
+  $('.website-content').on('click', '.btn-warning', websiteEvents.onUpdateWebsite)
+
   // Blogs
   $('#show-all-blogs').on('click', blogEvents.onGetAllBlogs)
   $('#create-blog').on('submit', blogEvents.onCreateBlog)
-  $('.blog-content').on('click', 'button', blogEvents.onDeleteBlog)
+  $('.blog-content').on('click', '.btn-danger', blogEvents.onDeleteBlog)
 })

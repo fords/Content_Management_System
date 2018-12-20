@@ -11,7 +11,7 @@ const deleteWebsiteSuccess = data => {
 }
 
 const updateWebsiteSuccess = data => {
-
+  $('#update-website-message').html('Successfully updated a website!')
 }
 
 const getWebsiteSuccess = data => {
@@ -20,7 +20,7 @@ const getWebsiteSuccess = data => {
 }
 
 const failure = data => {
-  $('#message').html('Oops, something went wrong, please try again')
+  $('#update-website-message').html('Oops, something went wrong, please try again')
 }
 module.exports = {
   getWebsiteSuccess,

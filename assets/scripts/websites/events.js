@@ -23,9 +23,12 @@ const onGetAllWebsites = event => {
 
 const onUpdateWebsite = event => {
   event.preventDefault()
-  const data = getFormFields(event.target)
+
+  const websiteId = $(event.target).closest('section').data('id')
+  console.log(websiteId)
+  // const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  api.updateWebsite(data)
+  api.updateWebsite(websiteId)
     .then(ui.updateWebsiteSuccess) // if your request was succesful
     .catch(ui.failure) // if your request failed
 }

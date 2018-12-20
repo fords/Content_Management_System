@@ -11,7 +11,43 @@
         <p class="card-text">{{website.company}}</p>
       </div>
       <div id="website-actions" class="card-footer text-right">
-        <button type="submit" class="btn btn-warning">Update</button>
+        <button type="button" id="update-button" class="btn btn-primary" data-toggle="modal"
+          data-target="#updateModal">Update</button>
+
+          <div class="modal fade" id="updateModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="updateModalLabel">Update Website</h5>
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <!--update website form-->
+                  <p id="update-website-message"></p>
+
+                  <form class="form" data-id="{{website._id}}">
+                    <p>{{website._id}}</p>
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="website[title]"
+                       placeholder="Website Title">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="website[company]"
+                       placeholder="Website Company">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="website[text]"
+                       placeholder="Website Description">
+                    </div>
+                    <button type="submit" class="btn btn-warning">Update Website</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <button type="submit" class="btn btn-danger">Delete</button>
       </div>
     </div>
