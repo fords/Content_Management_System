@@ -1,4 +1,4 @@
-const store = require('../store.js')
+// const store = require('../store.js')
 const showWebsitesTemplate = require('../templates/website-listing.handlebars')
 
 const createWebsiteSuccess = data => {
