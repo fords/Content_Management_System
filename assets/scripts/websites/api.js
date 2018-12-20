@@ -1,7 +1,7 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const getAllWebsites = function (data) {
+const getAllWebsites = function () {
   return $.ajax({
     url: config.apiUrl + '/websites',
     method: 'GET',
@@ -11,7 +11,6 @@ const getAllWebsites = function (data) {
   })
 }
 const createWebsite = function (data) {
-  console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/websites/',
     method: 'POST',
@@ -22,16 +21,14 @@ const createWebsite = function (data) {
   })
 }
 
-const deleteWebsite = function (data) {
-  const id = data.website.id
-  // delete data.website.id
+const deleteWebsite = function (websiteId) {
+  console.log(websiteId)
   return $.ajax({
-    url: config.apiUrl + '/websites/' + id,
+    url: config.apiUrl + '/websites/' + websiteId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

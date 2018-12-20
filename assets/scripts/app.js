@@ -18,4 +18,6 @@ $(() => {
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
   $('#show-all-blogposts').on('click', blogpostsEvents.onGetAllBlogposts)
   $('#create-blogpost').on('submit', blogpostsEvents.onCreateBlogpost)
+  $('.blogpost-content').on('click', 'button', blogpostsEvents.onDeleteBlogpost)
+  $('.website-content').on('click', 'button', websiteEvents.onDeleteWebsite)
 })
