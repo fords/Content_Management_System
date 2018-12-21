@@ -9,7 +9,7 @@ const getAllWebsites = function () {
 }
 const createWebsite = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/websites/',
+    url: config.apiUrl + '/websites',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
