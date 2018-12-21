@@ -19,8 +19,8 @@ const getBlogSuccess = data => {
 }
 
 const failure = data => {
-  $('#blog-message').html('Oops, something went wrong, please try again')
   $('create-blog-message').html('Failure creating blog')
+  $('#create-blog-message').css('color', 'red')
 }
 module.exports = {
   getBlogSuccess,

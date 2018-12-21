@@ -3,11 +3,12 @@
 
 
   <div class="shown-blog">
+      <p id="blog-message"></p>
     <h5 data-id="{{blog._id}}" class="card-header">{{blog.title}}</h5>
     <section data-id="{{blog._id}}">
       <!-- <img class="card-img-top" src="{{blog.img_url}}" alt="Card image cap"> -->
       <div class="card-body">
-        <p id="blog-message"></p>
+
         <p class="card-text">{{blog.text}}</p>
         <!-- <p class="card-text"><small class="text-muted">{{blog.time}}</small></p> -->
         <p class="card-text">{{blog.owner}}</p>

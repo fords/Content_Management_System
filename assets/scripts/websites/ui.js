@@ -20,6 +20,7 @@ const getWebsiteSuccess = data => {
 
 const failure = data => {
   $('#update-website-message').html('Oops, something went wrong, please try again')
+  $('#update-website-message').css('color', 'red')
 }
 module.exports = {
   getWebsiteSuccess,
