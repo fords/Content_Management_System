@@ -1,20 +1,17 @@
 {{#each blogs as |blog|}}
-  {{log blog}}
 
 
   <div class="shown-blog">
-      <p id="blog-message"></p>
-    <h5 data-id="{{blog._id}}" class="card-header">{{blog.title}}</h5>
+    <h5 data-id="{{blog._id}}" class="card-header">Title: {{blog.title}} <span class="blog-message"></span></h5>
     <section data-id="{{blog._id}}">
       <!-- <img class="card-img-top" src="{{blog.img_url}}" alt="Card image cap"> -->
       <div class="card-body">
-
         <p class="card-text">{{blog.text}}</p>
         <!-- <p class="card-text"><small class="text-muted">{{blog.time}}</small></p> -->
-        <p class="card-text">{{blog.owner}}</p>
+        <p class="card-text">Written by {{blog.owner}}</p>
       </div>
-      <div id="blog-actions" class="card-footer text-right">
-        <button type="button" class="btn btn-primary" data-toggle="modal"
+      <div class="blog-actions card-footer text-right">
+        <button type="button" class="update-blog-btn btn-primary" data-toggle="modal"
           data-target="#updateModal{{blog._id}}">Update</button>
 
           <div class="modal fade" id="updateModal{{blog._id}}">
@@ -47,7 +44,7 @@
             </div>
           <!-- update website form -->
           </div>
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="delete-blog-btn btn-danger">Delete</button>
       </div>
     </section>
   </div>

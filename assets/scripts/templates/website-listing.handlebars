@@ -2,16 +2,16 @@
 
 
   <div class="shown-website">
-    <h5 data-id="{{website._id}}" class="card-header">{{website.title}}</h5>
+    <h5 data-id="{{website._id}}" class="card-header">{{website.title}} <span class="website-message"></span></h5>
     <section data-id="{{website._id}}">
     <!-- <div class="card mb-3"> -->
       <div class="card-body">
         <p id='message'></p>
         <p class="card-text">{{website.text}}</p>
-        <p class="card-text">{{website.company}}</p>
+        <p class="card-text">Sponsored by the people at {{website.company}}</p>
       </div>
-      <div id="website-actions" class="card-footer text-right">
-        <button type="button" class="btn btn-primary" data-toggle="modal"
+      <div class="website-actions card-footer text-right">
+        <button type="button" class="update-website-btn btn-primary" data-toggle="modal"
           data-target="#updateModal{{website._id}}">Update</button>
 
           <div class="modal fade" id="updateModal{{website._id}}">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="modal-body">
                   <!--update website form-->
-                  <p id="update-website-message"></p>
+                  <p class="update-website-message"></p>
 
                   <form class="update-website-form">
                     <div class="form-group">
@@ -48,7 +48,7 @@
             </div>
           </div>
         <!-- update website form -->
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="delete-website-btn btn-danger">Delete</button>
       </div>
     </div>
     </section>
