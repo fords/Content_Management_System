@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> Template </title>
+      <title>Sserpdrow</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,8 +10,217 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
     </head>
     <body>
-      <h1> Hello World</h1>
+      <div class="btn-toolbar justify-content-between" role="toolbar">
+
+        <!-- Auth Grouping -->
+        <div class="btn-group" role="group" aria-label="auth-group">
+        <!-- Sign Up/In Modal-->
+          <button type="button" class="sign-up-btn btn-primary" data-toggle="modal"
+            data-target="#authorizationModal">Sign Up/In</button>
+
+            <div class="modal fade" id="authorizationModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="up-message"></p>
+
+                    <form id="sign-up">
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                         placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password_confirmation]"
+                         placeholder="Confirm Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign Up!</button>
+                    </form>
+                    <hr><hr>
+
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
+                    <hr><br>
+                    <form id="sign-in"> <!--id of form is used-->
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                       placeholder="Password">
+                     </div>
+                      <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Up/In Modal-->
+
+          <!-- Sign Out/PW Modal-->
+          <button type="button" class="options-btn btn-primary" data-toggle="modal"
+            data-target="#optionsModal">Options</button>
+
+            <div class="modal fade" id="optionsModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="out-message"></p>
+
+                    <form id="change-password" class="form-inline">
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[old]"
+                         placeholder="OldPassword">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[new]"
+                         placeholder="New Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Change password</button>
+                    </form>
+                    <br>
+
+                    <form id="sign-out" >
+                      <button type="submit" class="btn btn-danger">Sign Out</button>
+                    </form>
+
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Out/PW Modal-->
+        </div>
+        <!-- Auth Grouping -->
+
+      <!-- Website Grouping -->
+        <div class="btn-group" role="group" aria-label="website-group">
+
+        <!--Show Website Data-->
+          <input class="show-websites-btn btn-success" type="button" value='Show Websites'>
+        <!--Show Website Data-->
+
+        <!--Create Website Modal-->
+          <button type="button" class="create-website-btn btn-success" data-toggle="modal"
+            data-target="#createWebsiteModal">Create Website</button>
+
+            <div class="modal fade" id="createWebsiteModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createWebsiteModalLabel">Create Website</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                  <!-- Create Website Form -->
+                    <p class="create-website-message"></p>
+
+                    <form id="create-website">
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="website[title]"
+                         placeholder="Title">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="website[company]" placeholder="Company Name">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="website[text]"
+                         placeholder="Website text">
+                      </div>
+
+                      <button type="submit" class="btn btn-secondary">Create Website</button>
+                    </form>
+                  <!-- Create Website Form -->
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!--Create Website Modal-->
+
+      </div>
+      <br>
+    <!-- Website Grouping -->
+
+
+    <div class="btn-group" role="group" aria-label="blog-group">
+    <!--Show Blog Data-->
+      <input class="show-blogs-btn btn-primary" type="button" value='Show Blogs'>
+    <!--Show Blog Data-->
+
+    <!--Create Blog Modal-->
+      <button type="button" class="create-blog-btn btn-primary" data-toggle="modal"
+        data-target="#createBlogModal">Create Blog</button>
+
+        <div class="modal fade" id="createBlogModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="createBlogModalLabel">Create Blog</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <!-- Create Blog Form -->
+                <p class="create-blog-message"></p>
+
+                <form id="create-blog">
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="blog[title]" placeholder="Blog Title">
+                  </div>
+                  <!-- <div class="form-group">
+                    <input type="file" class="form-control-file" name="blog[img_url]" placeholder="Add your image">
+                  </div> -->
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="blog[text]"
+                     placeholder="Blog Text">
+                  </div>
+                  <button type="submit" class="btn btn-secondary">Create Blog</button>
+                </form>
+                <!-- Create Blog Form -->
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Create Blog Modal-->
+    </div>
+    <br>
+  <!-- Blog Grouping -->
+</div>
+
+      <div class="jumbotron">
+          <h1><span class="jumbotron-title">Sserpdrow</span></h1> <!-- Change to business name once successful on sign in -->
+          <p><span class="jumbotron-content">Join Our Community of Businesses</span></p> <!-- same as name, can change to match signed in user -->
+          <!-- <img class="float-right" src="#" alt="Business Photo">  either image pasted here or chnage CSS background image -->
+      </div>
+      <br>
+
+
+
+      <div class='website-content'></div>
+      <div class="blog-content"></div>
+
+
     </body>
 </html>

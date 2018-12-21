@@ -1,0 +1,54 @@
+{{#each blogs as |blog|}}
+
+
+  <div class="shown-blog">
+    <h5 data-id="{{blog._id}}" class="card-header">Title: {{blog.title}} <span class="blog-message"></span></h5>
+    <section data-id="{{blog._id}}">
+      <!-- <img class="card-img-top" src="{{blog.img_url}}" alt="Card image cap"> -->
+      <div class="card-body">
+        <p class="card-text">{{blog.text}}</p>
+        <!-- <p class="card-text"><small class="text-muted">{{blog.time}}</small></p> -->
+        <p class="card-text">Written by {{blog.owner}}</p>
+      </div>
+      <div class="blog-actions card-footer text-right">
+        <button type="button" class="update-blog-btn btn-primary" data-toggle="modal"
+          data-target="#updateModal{{blog._id}}">Update</button>
+
+          <div class="modal fade" id="updateModal{{blog._id}}">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="updateModalLabel">Update Blog</h5>
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                <!--update website form-->
+                  <p id="update-blog-message"></p>
+
+                  <form class="update-blog-form">
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="blog[title]"
+                       placeholder="Blog Title">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="blog[text]"
+                       placeholder="Blog Description">
+                    </div>
+                    <button type="submit" class="btn btn-warning">Update Blog</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          <!-- update website form -->
+          </div>
+        <button type="submit" class="delete-blog-btn btn-danger">Delete</button>
+      </div>
+    </section>
+  </div>
+  <br>
+
+
+{{/each}}
