@@ -78,8 +78,8 @@ min-height:100%;
   position: absolute;
   background-image:
     url(http://gdurl.com/dIoP),
-    url(http://gdurl.com/G5Vp),
-    url(http://gdurl.com/m9Yz);
+    url(http://gdurl.com/G5Vp);
+  //   url(http://gdurl.com/m9Yz);
   z-index: 1;
   pointer-events: none;
   -moz-animation: snow 10s linear infinite;
@@ -216,12 +216,12 @@ $textColor: #ffffff;
 }
 
 // Let it snow
-.snow{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-}
+// .snow{
+// 	position: relative;
+// 	width: 100%;
+// 	height: 100%;
+// 	pointer-events: none;
+// }
 
 
 .snowflake {
@@ -241,8 +241,8 @@ $textColor: #ffffff;
   -moz-animation-timing-function: ease-in-out;
   -ms-animation-timing-function: ease-in-out;
 }
-#snow {
-  position: absolute;
-	width: 100%;
-	height: 100%;
-}
+// #snow {
+//   position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// }
