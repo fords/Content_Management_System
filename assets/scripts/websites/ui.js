@@ -1,7 +1,7 @@
 const showWebsitesTemplate = require('../templates/website-listing.handlebars')
 
 const createWebsiteSuccess = data => {
-  $('#create-website-message').html('Successfully created a website')
+  $('.create-website-message').html('Successfully created a website')
 }
 
 const deleteWebsiteSuccess = data => {
@@ -19,8 +19,10 @@ const getWebsiteSuccess = data => {
 }
 
 const failure = data => {
-  $('#update-website-message').html('Oops, something went wrong, please try again')
-  $('#update-website-message').css('color', 'red')
+  $('.website-message').html('Failure deleting website')
+  $('.website-message').css('color', 'red')
+  $('.update-website-message').html('Oops, something went wrong, please try again')
+  $('.update-website-message').css('color', 'red')
 }
 module.exports = {
   getWebsiteSuccess,

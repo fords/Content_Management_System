@@ -12,14 +12,14 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
 
   // Websites
-  $('#show-all-websites').on('click', websiteEvents.onGetAllWebsites)
+  $('.show-websites-btn').on('click', websiteEvents.onGetAllWebsites)
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
-  $('.website-content').on('click', '.btn-danger', websiteEvents.onDeleteWebsite)
+  $('.website-content').on('click', '.delete-website-btn', websiteEvents.onDeleteWebsite)
   $('.website-content').on('submit', websiteEvents.onUpdateWebsite)
 
   // Blogs
-  $('#show-all-blogs').on('click', blogEvents.onGetAllBlogs)
+  $('.show-blogs-btn').on('click', blogEvents.onGetAllBlogs)
   $('#create-blog').on('submit', blogEvents.onCreateBlog)
-  $('.blog-content').on('click', '.btn-danger', blogEvents.onDeleteBlog)
+  $('.blog-content').on('click', '.delete-blog-btn', blogEvents.onDeleteBlog)
   $('.blog-content').on('submit', blogEvents.onUpdateBlog)
 })

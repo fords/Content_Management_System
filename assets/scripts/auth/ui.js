@@ -18,13 +18,14 @@ const signUpFailure = () => { // removed error parameter
 
 const signInSuccess = data => {
   store.user = data.user
-  $('#up-message').removeClass()
-  $('#up-message').addClass('success')
-  $('#options-button').css('visibility', 'visible') // show options button
-  $('#create-button').css('visibility', 'visible')
-  $('#update-button').css('visibility', 'visible')
-  $('#blogpost-actions').css('visibility', 'visible')
-  $('#sign-up-button').hide() // sign up is hidden
+  $('.options-btn').css('visibility', 'visible') // show options button
+  $('.create-website-btn').css('visibility', 'visible')
+  $('.create-blog-btn').css('visibility', 'visible')
+  $('.update-website-btn').css('visibility', 'visible')
+  $('.update-blog-btn').css('visibility', 'visible')
+  $('.delete-website-btn').css('visibility', 'visible')
+  $('.delete-blog-btn').css('visibility', 'visible')
+  $('.sign-up-btn').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
 }
 
@@ -53,13 +54,14 @@ const changePasswordFailure = () => { // removed error parameter
 
 const signOutSuccess = data => {
   store.user = null
-  $('#out-message').removeClass()
-  $('#out-message').addClass('success')
-  // $('.current-player').hide()
-  $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
-  $('#sign-up-button').show() // sign up appears
-  $('#create-button').css('visibility', 'hidden')
-  $('#update-button').css('visibility', 'hidden')
+  $('.options-btn').css('visibility', 'hidden') // show options button
+  $('.create-website-btn').css('visibility', 'hidden')
+  $('.create-blog-btn').css('visibility', 'hidden')
+  $('.update-website-btn').css('visibility', 'hidden')
+  $('.update-blog-btn').css('visibility', 'hidden')
+  $('.delete-website-btn').css('visibility', 'hidden')
+  $('.delete-blog-btn').css('visibility', 'hidden')
+  $('.sign-up-btn').show() // sign up is hidden
   $('#optionsModal').modal('hide') // closes modal after success
 }
 

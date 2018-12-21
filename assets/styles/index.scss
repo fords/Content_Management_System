@@ -2,13 +2,24 @@
 @import 'colors';
 
 // hidden: options, create, update website, delete post
-#options-button,
-#create-button,
-#update-button,
-#blogpost-actions {
-  visibility: visible;
+.options-btn,
+.create-website-btn,
+.create-blog-btn,
+.update-website-btn,
+.update-blog-btn,
+.delete-website-btn,
+.delete-blog-btn {
+  visibility: hidden;
 }
 
 .jumbotron {
   background-color: skyblue;
+}
+
+.shown-blog {
+  background-color: #3198ff;
+}
+
+.shown-website {
+  background-color: #41b534;
 }
