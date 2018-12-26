@@ -16,6 +16,8 @@ const updateBlogSuccess = data => {
 const getBlogSuccess = data => {
   const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
   $('.blog-content').html(showBlogsHtml)
+  // $('.delete-btn').css('visibility', 'hidden')
+  // $('.update-btn').css('visibility', 'hidden')
 }
 
 const failure = data => {

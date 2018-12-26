@@ -12,7 +12,6 @@ const signUpFailure = () => { // removed error parameter
   $('#up-message').show().text('Error on Sign Up')
   $('#up-message').removeClass()
   $('#up-message').addClass('failure')
-  // removed console.error
   $('#up-message').fadeOut(9000)
 }
 
@@ -21,11 +20,14 @@ const signInSuccess = data => {
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
+  $('#create-blog-button').css('visibility', 'visible')
   $('#create-button').css('visibility', 'visible')
   $('#update-button').css('visibility', 'visible')
   $('#blogpost-actions').css('visibility', 'visible')
   $('#sign-up-button').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
+  $('.shown-website').css('visibility', 'hidden')
+  $('.shown-blog').css('visibility', 'hidden')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -61,6 +63,8 @@ const signOutSuccess = data => {
   $('#create-button').css('visibility', 'hidden')
   $('#update-button').css('visibility', 'hidden')
   $('#optionsModal').modal('hide') // closes modal after success
+  $('.shown-website').css('visibility', 'hidden')
+  $('.shown-blog').css('visibility', 'hidden')
 }
 
 const signOutFailure = () => { // removed error parameter

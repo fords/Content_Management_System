@@ -10,12 +10,14 @@ const deleteWebsiteSuccess = data => {
 
 const updateWebsiteSuccess = data => {
   $('#update-website-message').html('Successfully updated a website!')
-  $('.modal').modal('hide') // closes modal after success
+  // $('.modal').modal('hide') // closes modal after success
 }
 
 const getWebsiteSuccess = data => {
   const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
   $('.website-content').html(showWebsitesHtml)
+  // $('.delete-btn').css('visibility', 'hidden')
+  // $('.update-btn').css('visibility', 'hidden')
 }
 
 const failure = data => {

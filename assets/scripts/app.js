@@ -6,6 +6,11 @@ const websiteEvents = require('./websites/events.js')
 
 $(() => {
   // Auth
+  $('#create-blog-button').css('visibility', 'hidden')
+  $('#create-button').css('visibility', 'hidden')
+  $('#show-all-blogs').css('visibility', 'hidden')
+  $('#show-all-websites').css('visibility', 'hidden')
+
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)

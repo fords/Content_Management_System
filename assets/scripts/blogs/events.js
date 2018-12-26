@@ -25,9 +25,10 @@ const onUpdateBlog = event => {
   const data = getFormFields(event.target)
   const blogId = $(event.target).closest('section').data('id')
   api.updateBlog(blogId, data)
-    .then(ui.updateBlogSuccess) // if your request was succesful
+    .then(ui.updateBlogSuccess)
+    // .then(() => )// if your request was succesful
     .catch(ui.failure) // if your request failed
-  $(event.target).trigger('reset')
+  // $(event.target).trigger('reset')
 }
 
 const onDeleteBlog = event => {
