@@ -19,6 +19,14 @@ const onGetAllWebsites = event => {
     .catch(ui.failure) // if your request failed
 }
 
+const onGetAllWebsitesVisitor = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getAllWebsites(data)
+    .then(ui.getWebsiteVisitorSuccess)
+    .catch(ui.failure) // if your request failed
+}
+
 const onUpdateWebsite = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -42,6 +50,7 @@ const onDeleteWebsite = event => {
 module.exports = {
 
   onGetAllWebsites,
+  onGetAllWebsitesVisitor,
   onCreateWebsite,
   onUpdateWebsite,
   onDeleteWebsite

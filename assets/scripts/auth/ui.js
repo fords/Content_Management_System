@@ -28,6 +28,10 @@ const signInSuccess = data => {
   $('#authorizationModal').modal('hide') // closes modal after success
   $('.shown-website').css('visibility', 'hidden')
   $('.shown-blog').css('visibility', 'hidden')
+  $('#show-all-blogs').css('visibility', 'visible')
+  $('#show-all-websites').css('visibility', 'visible')
+  $('#show-all-blogs-beforeLogIn').css('visibility', 'hidden')
+  $('#show-all-websites-beforeLogIn').css('visibility', 'hidden')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -61,10 +65,15 @@ const signOutSuccess = data => {
   $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
   $('#sign-up-button').show() // sign up appears
   $('#create-button').css('visibility', 'hidden')
+  $('#create-blog-button').css('visibility', 'hidden')
   $('#update-button').css('visibility', 'hidden')
   $('#optionsModal').modal('hide') // closes modal after success
   $('.shown-website').css('visibility', 'hidden')
   $('.shown-blog').css('visibility', 'hidden')
+  $('#show-all-blogs').css('visibility', 'hidden')
+  $('#show-all-websites').css('visibility', 'hidden')
+  $('#show-all-blogs-beforeLogIn').css('visibility', 'visible')
+  $('#show-all-websites-beforeLogIn').css('visibility', 'visible')
 }
 
 const signOutFailure = () => { // removed error parameter

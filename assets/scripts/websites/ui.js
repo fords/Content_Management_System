@@ -16,8 +16,15 @@ const updateWebsiteSuccess = data => {
 const getWebsiteSuccess = data => {
   const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
   $('.website-content').html(showWebsitesHtml)
-  // $('.delete-btn').css('visibility', 'hidden')
-  // $('.update-btn').css('visibility', 'hidden')
+  $('.delete-btn').css('visibility', 'visible')
+  $('.update-btn').css('visibility', 'visible')
+}
+
+const getWebsiteVisitorSuccess = data => {
+  const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
+  $('.website-content').html(showWebsitesHtml)
+  $('.delete-btn').css('visibility', 'hidden')
+  $('.update-btn').css('visibility', 'hidden')
 }
 
 const failure = data => {
@@ -25,6 +32,7 @@ const failure = data => {
 }
 module.exports = {
   getWebsiteSuccess,
+  getWebsiteVisitorSuccess,
   createWebsiteSuccess,
   updateWebsiteSuccess,
   deleteWebsiteSuccess,

@@ -10,6 +10,7 @@ $(() => {
   $('#create-button').css('visibility', 'hidden')
   $('#show-all-blogs').css('visibility', 'hidden')
   $('#show-all-websites').css('visibility', 'hidden')
+  $('#options-button').css('visibility', 'hidden')
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -18,12 +19,14 @@ $(() => {
 
   // Websites
   $('#show-all-websites').on('click', websiteEvents.onGetAllWebsites)
+  $('#show-all-websites-beforeLogIn').on('click', websiteEvents.onGetAllWebsitesVisitor)
   $('#create-website').on('submit', websiteEvents.onCreateWebsite)
   $('.website-content').on('click', '.btn-danger', websiteEvents.onDeleteWebsite)
   $('.website-content').on('submit', websiteEvents.onUpdateWebsite)
 
   // Blogs
   $('#show-all-blogs').on('click', blogEvents.onGetAllBlogs)
+  $('#show-all-blogs-beforeLogIn').on('click', blogEvents.onGetAllBlogsVisitor)
   $('#create-blog').on('submit', blogEvents.onCreateBlog)
   $('.blog-content').on('click', '.btn-danger', blogEvents.onDeleteBlog)
   $('.blog-content').on('submit', blogEvents.onUpdateBlog)

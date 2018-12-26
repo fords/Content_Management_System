@@ -26,7 +26,7 @@ const onUpdateBlog = event => {
   const blogId = $(event.target).closest('section').data('id')
   api.updateBlog(blogId, data)
     .then(ui.updateBlogSuccess)
-    // .then(() => )// if your request was succesful
+    .then(onGetAllBlogs)
     .catch(ui.failure) // if your request failed
   // $(event.target).trigger('reset')
 }
