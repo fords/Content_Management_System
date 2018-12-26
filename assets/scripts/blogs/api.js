@@ -10,7 +10,7 @@ const getAllBlogs = function () {
 }
 const createBlog = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/blogs/',
+    url: config.apiUrl + '/blogs',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token

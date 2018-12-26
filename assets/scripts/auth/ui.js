@@ -17,6 +17,7 @@ const signUpFailure = () => { // removed error parameter
 
 const signInSuccess = data => {
   store.user = data.user
+
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
@@ -25,6 +26,7 @@ const signInSuccess = data => {
   $('#update-button').css('visibility', 'visible')
   $('#blogpost-actions').css('visibility', 'visible')
   $('#sign-up-button').hide() // sign up is hidden
+
   $('#authorizationModal').modal('hide') // closes modal after success
   $('.shown-website').css('visibility', 'hidden')
   $('.shown-blog').css('visibility', 'hidden')
@@ -63,6 +65,7 @@ const changePasswordFailure = () => { // removed error parameter
 
 const signOutSuccess = data => {
   store.user = null
+
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
   // $('.current-player').hide()
@@ -71,6 +74,7 @@ const signOutSuccess = data => {
   $('#create-button').css('visibility', 'hidden')
   $('#create-blog-button').css('visibility', 'hidden')
   $('#update-button').css('visibility', 'hidden')
+
   $('#optionsModal').modal('hide') // closes modal after success
   $('.shown-website').css('visibility', 'hidden')
   $('.shown-blog').css('visibility', 'hidden')

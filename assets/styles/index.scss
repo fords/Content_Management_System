@@ -2,11 +2,14 @@
 @import 'colors';
 
 // hidden: options, create, update website, delete post
-#options-button,
-#create-button,
-#update-button,
-#blogpost-actions {
-  visibility: visible;
+.options-btn,
+.create-website-btn,
+.create-blog-btn,
+.update-website-btn,
+.update-blog-btn,
+.delete-website-btn,
+.delete-blog-btn {
+  visibility: hidden;
 }
 
 .jumbotron {
@@ -14,7 +17,13 @@
 }
 
 
+.shown-blog {
+  background-color: #3198ff;
+}
 
+.shown-website {
+  background-color: #41b534;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -72,6 +81,7 @@ min-height:100%;
   background-image:
     url(http://gdurl.com/dIoP),
     url(http://gdurl.com/G5Vp);
+
   z-index: 1;
   pointer-events: none;
   -moz-animation: snow 10s linear infinite;
@@ -147,7 +157,7 @@ i:before { -webkit-transform: rotate(240deg); }
 	-webkit-transform-origin: right -15px;
 }
 
-/* different delays for snow starting time */
+
 .snowflakes i:nth-child(7n) {
   opacity:.3;
   -webkit-animation-delay: 0s;
@@ -184,8 +194,8 @@ i:before { -webkit-transform: rotate(240deg); }
   -webkit-animation-timing-function:ease-in;
 }
 
-// color
-$flakes: 150;
+
+$flakes: 150; // match flakes in mark up
 $snowColor: #ffffff;
 
 // Colors
@@ -193,7 +203,7 @@ $topGradient: #00A3EF;
 $bottomGradient: #B7E7FC;
 $textColor: #ffffff;
 
-// frames
+
 @mixin keyframes($name) {
     @-webkit-keyframes $name { @content; }
     @-moz-keyframes $name { @content; }
@@ -206,6 +216,7 @@ $textColor: #ffffff;
     -o-animation: #{$str};
     animation: #{$str};
 }
+
 
 #holidays {
 	position: absolute;
@@ -230,6 +241,7 @@ $textColor: #ffffff;
 	left: 90%;
 }
 
+
 .snowflake {
   display: inline-block;
   height: 20px;
@@ -240,6 +252,7 @@ $textColor: #ffffff;
   linear-gradient(45deg,  rgba(255,255,255,0) 43%, #fff 43%, #fff 57%, rgba(255,255,255,0) 57%),
   linear-gradient(135deg,  rgba(255,255,255,0) 43%, #fff 43%, #fff 57%, rgba(255,255,255,0) 57%);
   border-radius: 50%;
+
   -webkit-transform-origin: left -20px;
   -moz-transform-origin: left -20px;
   -ms-transform-origin: left -20px;
@@ -247,8 +260,10 @@ $textColor: #ffffff;
   -moz-animation-timing-function: ease-in-out;
   -ms-animation-timing-function: ease-in-out;
 }
+
 #snow {
   position: absolute;
 	width: 100%;
 	height: 100%;
 }
+

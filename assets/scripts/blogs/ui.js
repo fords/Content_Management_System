@@ -1,7 +1,7 @@
 const showBlogsTemplate = require('../templates/blog-listing.handlebars')
 
 const createBlogSuccess = data => {
-  $('#create-blog-message').html('Successfully created a blog')
+  $('.create-blog-message').html('Successfully created a blog')
 }
 
 const deleteBlogSuccess = data => {
@@ -34,9 +34,11 @@ const getBlogSuccessVisitor = data => {
 }
 
 const failure = data => {
+
   $('#blog-message').html('Oops, something went wrong, please try again')
   $('#blog-message').fadeOut(3000)
   $('create-blog-message').html('Failure creating blog')
+
 }
 module.exports = {
   getBlogSuccess,
