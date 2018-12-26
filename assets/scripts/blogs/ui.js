@@ -16,8 +16,17 @@ const updateBlogSuccess = data => {
 const getBlogSuccess = data => {
   const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
   $('.blog-content').html(showBlogsHtml)
-  // $('.delete-btn').css('visibility', 'hidden')
-  // $('.update-btn').css('visibility', 'hidden')
+  $('.delete-btn').css('visibility', 'visible')
+  $('.update-btn').css('visibility', 'visible')
+  // $('.website-content').css('visibility', 'hidden')
+}
+
+const getBlogSuccessVisitor = data => {
+  const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
+  $('.blog-content').html(showBlogsHtml)
+  $('.delete-btn').css('visibility', 'hidden')
+  $('.update-btn').css('visibility', 'hidden')
+  // $('.website-content').css('visibility', 'hidden')
 }
 
 const failure = data => {
@@ -26,6 +35,7 @@ const failure = data => {
 }
 module.exports = {
   getBlogSuccess,
+  getBlogSuccessVisitor,
   createBlogSuccess,
   updateBlogSuccess,
   deleteBlogSuccess,

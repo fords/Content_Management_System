@@ -2,6 +2,7 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const getAllBlogs = function () {
+  // console.log('getting blogs')
   return $.ajax({
     url: config.apiUrl + '/blogs',
     method: 'GET'

@@ -74,6 +74,8 @@ const signOutSuccess = data => {
   $('#show-all-websites').css('visibility', 'hidden')
   $('#show-all-blogs-beforeLogIn').css('visibility', 'visible')
   $('#show-all-websites-beforeLogIn').css('visibility', 'visible')
+  $('.delete-btn').css('visibility', 'hidden')
+  $('.update-btn').css('visibility', 'hidden')
 }
 
 const signOutFailure = () => { // removed error parameter

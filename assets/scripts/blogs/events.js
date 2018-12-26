@@ -11,6 +11,15 @@ const onGetAllBlogs = event => {
   $(event.target).trigger('reset')
 }
 
+const onGetAllBlogsVisitor = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getAllBlogs(data)
+    .then(ui.getBlogSuccessVisitor)
+    .catch(ui.failure) // if your request failed
+  $(event.target).trigger('reset')
+}
+
 const onCreateBlog = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -42,6 +51,7 @@ const onDeleteBlog = event => {
 
 module.exports = {
   onGetAllBlogs,
+  onGetAllBlogsVisitor,
   onCreateBlog,
   onUpdateBlog,
   onDeleteBlog
