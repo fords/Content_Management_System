@@ -16,8 +16,8 @@ const updateWebsiteSuccess = data => {
 const getWebsiteSuccess = data => {
   const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
   $('.website-content').html(showWebsitesHtml)
-  $('.delete-btn').css('visibility', 'visible')
-  $('.update-btn').css('visibility', 'visible')
+  $('.delete-website-btn').css('visibility', 'visible')
+  $('.update-website-btn').css('visibility', 'visible')
 }
 
 const getWebsiteVisitorSuccess = data => {
