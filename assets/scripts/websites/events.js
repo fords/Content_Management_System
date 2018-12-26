@@ -33,8 +33,8 @@ const onUpdateWebsite = event => {
   const websiteId = $(event.target).closest('section').data('id')
   // $(event.target).trigger('reset')
   api.updateWebsite(websiteId, data)
-    // .then(() => onGetAllWebsites(event))
     .then(ui.updateWebsiteSuccess) // if your request was succesful
+    // .then(onGetAllWebsites)
     .catch(ui.failure) // if your request failed
 }
 

@@ -18,6 +18,7 @@ const getBlogSuccess = data => {
   $('.blog-content').html(showBlogsHtml)
   $('.delete-blog-btn').css('visibility', 'visible')
   $('.update-blog-btn').css('visibility', 'visible')
+  $('#snow').css('visibility', 'hidden')
   // $('.website-content').css('visibility', 'hidden')
 }
 
@@ -26,11 +27,13 @@ const getBlogSuccessVisitor = data => {
   $('.blog-content').html(showBlogsHtml)
   $('.delete-btn').css('visibility', 'hidden')
   $('.update-btn').css('visibility', 'hidden')
+  $('#snow').css('visibility', 'hidden')
   // $('.website-content').css('visibility', 'hidden')
 }
 
 const failure = data => {
   $('#blog-message').html('Oops, something went wrong, please try again')
+  $('#blog-message').fadeOut(3000)
   $('create-blog-message').html('Failure creating blog')
 }
 module.exports = {

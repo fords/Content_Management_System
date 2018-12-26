@@ -32,6 +32,8 @@ const signInSuccess = data => {
   $('#show-all-websites').css('visibility', 'visible')
   $('#show-all-blogs-beforeLogIn').css('visibility', 'hidden')
   $('#show-all-websites-beforeLogIn').css('visibility', 'hidden')
+  $('.snowflakes').css('visibility', 'hidden')
+  $('#snow').css('visibility', 'hidden')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -76,6 +78,8 @@ const signOutSuccess = data => {
   $('#show-all-websites-beforeLogIn').css('visibility', 'visible')
   $('.delete-btn').css('visibility', 'hidden')
   $('.update-btn').css('visibility', 'hidden')
+  $('.snowflakes').css('visibility', 'visible')
+  $('#snow').css('visibility', 'visible')
 }
 
 const signOutFailure = () => { // removed error parameter
