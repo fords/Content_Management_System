@@ -28,6 +28,8 @@ const getBlogSuccessVisitor = data => {
   $('.delete-btn').css('visibility', 'hidden')
   $('.update-btn').css('visibility', 'hidden')
   $('#snow').css('visibility', 'hidden')
+  $('#holidays').css('visibility', 'hidden')
+  $('#team').css('visibility', 'hidden')
   // $('.website-content').css('visibility', 'hidden')
 }
 
