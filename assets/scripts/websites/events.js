@@ -19,14 +19,23 @@ const onGetAllWebsites = event => {
     .catch(ui.failure) // if your request failed
 }
 
+const onGetAllWebsitesVisitor = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getAllWebsites(data)
+    .then(ui.getWebsiteVisitorSuccess)
+    .catch(ui.failure) // if your request failed
+}
+
 const onUpdateWebsite = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const websiteId = $(event.target).closest('section').data('id')
+  // $(event.target).trigger('reset')
   api.updateWebsite(websiteId, data)
     .then(ui.updateWebsiteSuccess) // if your request was succesful
+    // .then(onGetAllWebsites)
     .catch(ui.failure) // if your request failed
-  $(event.target).trigger('reset')
 }
 
 const onDeleteWebsite = event => {
@@ -41,6 +50,7 @@ const onDeleteWebsite = event => {
 module.exports = {
 
   onGetAllWebsites,
+  onGetAllWebsitesVisitor,
   onCreateWebsite,
   onUpdateWebsite,
   onDeleteWebsite

@@ -11,6 +11,15 @@ const onGetAllBlogs = event => {
   $(event.target).trigger('reset')
 }
 
+const onGetAllBlogsVisitor = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getAllBlogs(data)
+    .then(ui.getBlogSuccessVisitor)
+    .catch(ui.failure) // if your request failed
+  $(event.target).trigger('reset')
+}
+
 const onCreateBlog = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -25,9 +34,10 @@ const onUpdateBlog = event => {
   const data = getFormFields(event.target)
   const blogId = $(event.target).closest('section').data('id')
   api.updateBlog(blogId, data)
-    .then(ui.updateBlogSuccess) // if your request was succesful
+    .then(ui.updateBlogSuccess)
+    // .then(onGetAllBlogs)
     .catch(ui.failure) // if your request failed
-  $(event.target).trigger('reset')
+  // $(event.target).trigger('reset')
 }
 
 const onDeleteBlog = event => {
@@ -41,6 +51,7 @@ const onDeleteBlog = event => {
 
 module.exports = {
   onGetAllBlogs,
+  onGetAllBlogsVisitor,
   onCreateBlog,
   onUpdateBlog,
   onDeleteBlog

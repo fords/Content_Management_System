@@ -16,16 +16,33 @@ const updateBlogSuccess = data => {
 const getBlogSuccess = data => {
   const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
   $('.blog-content').html(showBlogsHtml)
+  $('.delete-blog-btn').css('visibility', 'visible')
+  $('.update-blog-btn').css('visibility', 'visible')
+  $('#snow').css('visibility', 'hidden')
+  // $('.website-content').css('visibility', 'hidden')
+}
+
+const getBlogSuccessVisitor = data => {
+  const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
+  $('.blog-content').html(showBlogsHtml)
+  $('.delete-btn').css('visibility', 'hidden')
+  $('.update-btn').css('visibility', 'hidden')
+  $('#snow').css('visibility', 'hidden')
+  $('#holidays').css('visibility', 'hidden')
+  $('#team').css('visibility', 'hidden')
+  // $('.website-content').css('visibility', 'hidden')
 }
 
 const failure = data => {
-  $('.create-blog-message').html('Failure creating blog')
-  $('.create-blog-message').css('color', 'red')
-  $('.blog-message').html('Failure deleting blog')
-  $('.blog-message').css('color', 'red')
+
+  $('#blog-message').html('Oops, something went wrong, please try again')
+  $('#blog-message').fadeOut(3000)
+  $('create-blog-message').html('Failure creating blog')
+
 }
 module.exports = {
   getBlogSuccess,
+  getBlogSuccessVisitor,
   createBlogSuccess,
   updateBlogSuccess,
   deleteBlogSuccess,

@@ -10,8 +10,10 @@
         <p class="card-text">{{website.text}}</p>
         <p class="card-text">Sponsored by the people at {{website.company}}</p>
       </div>
-      <div class="website-actions card-footer text-right">
-        <button type="button" class="update-website-btn btn-primary" data-toggle="modal"
+
+      <div id="website-actions" class="card-footer text-right">
+        <button type="button" class="update-website-btn update-btn btn btn-primary" data-toggle="modal"
+
           data-target="#updateModal{{website._id}}">Update</button>
 
           <div class="modal fade" id="updateModal{{website._id}}">
@@ -47,8 +49,10 @@
               </div>
             </div>
           </div>
-        <!-- update website form -->
-        <button type="submit" class="delete-website-btn btn-danger">Delete</button>
+
+                  <!-- update website form -->
+        <button type="submit" class="delete-website-btn delete-btn btn btn-danger">Delete</button>
+
       </div>
     </div>
     </section>

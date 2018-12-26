@@ -8,10 +8,13 @@
       <div class="card-body">
         <p class="card-text">{{blog.text}}</p>
         <!-- <p class="card-text"><small class="text-muted">{{blog.time}}</small></p> -->
-        <p class="card-text">Written by {{blog.owner}}</p>
+        <!-- would need below line for company name after joining table -->
+        <!-- <p class="card-text">{{blog.owner}}</p> -->
+
       </div>
-      <div class="blog-actions card-footer text-right">
-        <button type="button" class="update-blog-btn btn-primary" data-toggle="modal"
+      <div id="blog-actions" class="card-footer text-right">
+        <button type="button" class="update-blog-btn update-btn btn btn-primary" data-toggle="modal"
+
           data-target="#updateModal{{blog._id}}">Update</button>
 
           <div class="modal fade" id="updateModal{{blog._id}}">
@@ -42,9 +45,11 @@
                 </div>
               </div>
             </div>
-          <!-- update website form -->
+                <!-- update website form -->
           </div>
-        <button type="submit" class="delete-blog-btn btn-danger">Delete</button>
+
+        <button type="submit" class="delete-blog-btn delete-btn btn btn-danger">Delete</button>
+
       </div>
     </section>
   </div>
