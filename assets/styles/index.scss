@@ -207,6 +207,28 @@ $textColor: #ffffff;
     animation: #{$str};
 }
 
+#holidays {
+	position: absolute;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	text-align: center;
+	font: 10em "Codystar", sans-serif;
+	pointer-events: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#team{
+  position: absolute;
+	margin: auto;
+	top: 80%;
+	left: 90%;
+}
 
 .snowflake {
   display: inline-block;

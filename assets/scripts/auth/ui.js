@@ -34,6 +34,8 @@ const signInSuccess = data => {
   $('#show-all-websites-beforeLogIn').css('visibility', 'hidden')
   $('.snowflakes').css('visibility', 'hidden')
   $('#snow').css('visibility', 'hidden')
+  $('#team').css('visibility', 'hidden')
+  $('#holidays').css('visibility', 'hidden')
 }
 
 const signInFailure = () => { // removed error parameter
