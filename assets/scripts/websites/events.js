@@ -8,7 +8,7 @@ const onCreateWebsite = event => {
   $(event.target).trigger('reset')
   api.createWebsite(data)
     .then(ui.createWebsiteSuccess) // if your request was succesful
-    .catch(ui.failure) // if your request failed
+    .catch(ui.createWebsiteFailure) // if your request failed
 }
 
 const onGetAllWebsites = event => {
@@ -16,7 +16,7 @@ const onGetAllWebsites = event => {
   const data = getFormFields(event.target)
   api.getAllWebsites(data)
     .then(ui.getWebsiteSuccess)
-    .catch(ui.failure) // if your request failed
+    .catch(ui.getWebsiteFailure) // if your request failed
 }
 
 const onGetAllWebsitesVisitor = event => {
@@ -24,7 +24,7 @@ const onGetAllWebsitesVisitor = event => {
   const data = getFormFields(event.target)
   api.getAllWebsites(data)
     .then(ui.getWebsiteVisitorSuccess)
-    .catch(ui.failure) // if your request failed
+    .catch(ui.getWebsiteVisitorFailure) // if your request failed
 }
 
 const onUpdateWebsite = event => {
@@ -34,8 +34,8 @@ const onUpdateWebsite = event => {
   // $(event.target).trigger('reset')
   api.updateWebsite(websiteId, data)
     .then(ui.updateWebsiteSuccess) // if your request was succesful
-    // .then(onGetAllWebsites)
-    .catch(ui.failure) // if your request failed
+    .then(() => onGetAllWebsites(event)) // if your request was succesful
+    .catch(ui.updateWebsiteFailure) // if your request failed
 }
 
 const onDeleteWebsite = event => {
@@ -44,7 +44,7 @@ const onDeleteWebsite = event => {
   api.deleteWebsite(websiteId)
     .then(() => onGetAllWebsites(event)) // if your request was succesful
     .then(ui.deleteWebsiteSuccess)
-    .catch(ui.failure) // if your request failed
+    .catch(ui.deleteWebsiteFailure) // if your request failed
 }
 
 module.exports = {
