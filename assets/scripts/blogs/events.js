@@ -7,7 +7,7 @@ const onGetAllBlogs = event => {
   const data = getFormFields(event.target)
   api.getAllBlogs(data)
     .then(ui.getBlogSuccess)
-    .catch(ui.failure) // if your request failed
+    .catch(ui.getBlogFailure) // if your request failed
   $(event.target).trigger('reset')
 }
 
@@ -15,8 +15,8 @@ const onGetAllBlogsVisitor = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.getAllBlogs(data)
-    .then(ui.getBlogSuccessVisitor)
-    .catch(ui.failure) // if your request failed
+    .then(ui.getBlogVisitorSuccess)
+    .catch(ui.getBlogVisitorFailure) // if your request failed
   $(event.target).trigger('reset')
 }
 
@@ -26,7 +26,7 @@ const onCreateBlog = event => {
   $(event.target).trigger('reset')
   api.createBlog(data)
     .then(ui.createBlogSuccess) // if your request was succesful
-    .catch(ui.failure) // if your request failed
+    .catch(ui.createBlogFailure) // if your request failed
 }
 
 const onUpdateBlog = event => {
@@ -36,7 +36,7 @@ const onUpdateBlog = event => {
   api.updateBlog(blogId, data)
     .then(ui.updateBlogSuccess)
     // .then(onGetAllBlogs)
-    .catch(ui.failure) // if your request failed
+    .catch(ui.updateBlogFailure) // if your request failed
   // $(event.target).trigger('reset')
 }
 
@@ -45,8 +45,8 @@ const onDeleteBlog = event => {
   const blogId = $(event.target).closest('section').data('id')
   api.deleteBlog(blogId)
     .then(() => onGetAllBlogs(event))
-    .then(ui.DeleteBlogSuccess) // if your request was succesful
-    .catch(ui.failure) // if your request failed
+    .then(ui.deleteBlogSuccess) // if your request was succesful
+    .catch(ui.deleteBlogFailure) // if your request failed
 }
 
 module.exports = {
