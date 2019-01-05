@@ -23,9 +23,10 @@ After a user signs in to Sserpdrow they can create websites and blog posts.
 
 # Planning Docs
 
-Wireframe
+## Wireframe
 ![Alt Wireframe](Wireframe.png?raw=true)
-User Stories
+
+## User Stories
 ![Alt User Stories](User-Stories.png?raw=true)
 
 # Unsolved Problems
