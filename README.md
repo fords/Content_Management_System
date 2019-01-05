@@ -4,10 +4,10 @@ We were tasked with creating an application where users(companies/organizations)
 # Team Prompt :
 Build an application for Swedish web-conglomerate Sserpdrow! Your application's "users" will be companies/organizations that want to have their own company blog and web pages and they are going to use your application to CRUD their own "blog posts" and "web pages". When a user logs in, they should see a dashboard that lets them CRUD their "blog posts" and "web pages". Your application will also likely have “visitors” that just go to your site and want to consume (read) the content that your “users” (companies/organizations) have provided. When a "visitor" goes to your site, they should be shown a list of companies/organizations to view.
 
-
-
-Live application link: https://team-zorro.github.io/team-zorro-client/
-Link to Back end repository: https://github.com/Team-Zorro/team-zorro-server.git
+<ul>
+  <li>Live application link: https://team-zorro.github.io/team-zorro-client/ </li> 
+  <li>Link to Back end repository: https://github.com/Team-Zorro/team-zorro-server.git </li>
+</ul>
 
 After a user signs in to Sserpdrow they can create websites and blog posts.
 
