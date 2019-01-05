@@ -1,4 +1,5 @@
 const showWebsitesTemplate = require('../templates/website-listing.handlebars')
+const store = require('../store.js')
 
 const createWebsiteSuccess = data => {
   $('#create-website-message').show().text('Successfully created a website')
@@ -44,11 +45,19 @@ const updateWebsiteFailure = () => {
 }
 
 const getWebsiteSuccess = data => {
-  const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
-  $('.website-content').html(showWebsitesHtml)
-  $('.delete-website-btn').css('visibility', 'visible')
-  $('.update-website-btn').css('visibility', 'visible')
-  $('#snow').css('visibility', 'hidden')
+  store.count += 1
+  // console.log(store.count)
+  if (store.count % 2 === 0) {
+    const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
+
+    $('.website-content').html(showWebsitesHtml)
+    $('.website-content').show()
+    $('.delete-website-btn').css('visibility', 'visible')
+    $('.update-website-btn').css('visibility', 'visible')
+    $('#snow').css('visibility', 'hidden')
+  } else {
+    $('.website-content').hide()
+  }
 }
 
 const getWebsiteFailure = () => {
@@ -57,13 +66,19 @@ const getWebsiteFailure = () => {
 }
 
 const getWebsiteVisitorSuccess = data => {
-  const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
-  $('.website-content').html(showWebsitesHtml)
-  $('.delete-btn').css('visibility', 'hidden')
-  $('.update-btn').css('visibility', 'hidden')
-  $('#snow').css('visibility', 'hidden')
-  $('#holidays').css('visibility', 'hidden')
-  $('#team').css('visibility', 'hidden')
+  if (store.visitor_web) {
+    const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
+    $('.website-content').show()
+    $('.website-content').html(showWebsitesHtml)
+    $('.delete-btn').css('visibility', 'hidden')
+    $('.update-btn').css('visibility', 'hidden')
+    $('#snow').css('visibility', 'hidden')
+    $('#holidays').css('visibility', 'hidden')
+    $('#team').css('visibility', 'hidden')
+  } else {
+    $('.website-content').hide()
+  }
+  store.visitor_web = !store.visitor_web
 }
 
 const getWebsiteVisitorFailure = () => {

@@ -32,4 +32,8 @@ $(() => {
   $('#create-blog').on('submit', blogEvents.onCreateBlog)
   $('.blog-content').on('click', '.delete-blog-btn', blogEvents.onDeleteBlog)
   $('.blog-content').on('submit', blogEvents.onUpdateBlog)
+
+  setTimeout(function () {
+    $('#snow').css('visibility', 'hidden')
+  }, 10000)
 })
