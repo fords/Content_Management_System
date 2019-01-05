@@ -1,32 +1,46 @@
 const showBlogsTemplate = require('../templates/blog-listing.handlebars')
 
 const createBlogSuccess = data => {
-  $('.create-blog-message').html('Successfully created a blog')
-  $('.create-blog-message').fadeOut(5000)
+  $('#create-blog-message').show().text('Successfully created a blog')
+  $('#create-blog-message').removeClass()
+  $('#create-blog-message').addClass('success')
+  $('#create-blog-message').fadeOut(5000)
 }
 
 const createBlogFailure = () => {
-  $('.create-blog-message').html('Could not create a blog')
-  $('.create-blog-message').fadeOut(9000)
+  $('#create-blog-message').show().text('Could not create a blog')
+  $('#create-blog-message').removeClass()
+  $('#create-blog-message').addClass('failure')
+  $('#create-blog-message').fadeOut(5000)
 }
 
 const deleteBlogSuccess = data => {
-  $('.delete-blog-message').html('Successfully deleted a blog!').fadeOut(9000)
+  $('#delete-blog-message').show().text('Successfully deleted a blog!')
+  $('#delete-blog-message').removeClass()
+  $('#delete-blog-message').addClass('success')
+  $('#delete-blog-message').fadeOut(5000)
 }
 
 const deleteBlogFailure = () => {
-  $('.delete-blog-message').html('The blog was not able to be deleted')
-  $('.delete-blog-message').fadeOut(9000)
+  $('#delete-blog-message').show().text('The blog was not able to be deleted')
+  $('#delete-blog-message').removeClass()
+  $('#delete-blog-message').addClass('failure')
+  $('#delete-blog-message').fadeOut(5000)
 }
 
 const updateBlogSuccess = data => {
-  $('.update-blog-message').html('Successfully updated a blog!')
+  $('#update-blog-message').show().text('Successfully updated a blog!')
+  $('#update-blog-message').removeClass()
+  $('#update-blog-message').addClass('success')
   $('.modal').modal('hide') // closes modal after success
+  $('#update-blog-message').fadeOut(5000)
 }
 
 const updateBlogFailure = () => {
-  $('.update-blog-message').html('Unable to update the blog')
-  $('.update-blog-message').fadeout(9000)
+  $('#update-blog-message').show().text('Unable to update the blog')
+  $('#update-blog-message').removeClass()
+  $('#update-blog-message').addClass('failure')
+  $('#update-blog-message').fadeOut(5000)
 }
 
 const getBlogSuccess = data => {
@@ -39,7 +53,7 @@ const getBlogSuccess = data => {
 
 const getBlogFailure = () => {
   $('.blog-content').html('Unable to show all Blogs.')
-  $('.blog-content').fadeout(9000)
+  $('.blog-content').fadeout(5000)
 }
 
 const getBlogVisitorSuccess = data => {
@@ -54,7 +68,7 @@ const getBlogVisitorSuccess = data => {
 
 const getBlogVisitorFailure = () => {
   $('.blog-content').html('Something is wrong. We are unable to show the blogs.')
-  $('.blog-content').fadeout(9000)
+  $('.blog-content').fadeout(5000)
 }
 module.exports = {
   createBlogSuccess,

@@ -34,7 +34,7 @@ const onUpdateWebsite = event => {
   // $(event.target).trigger('reset')
   api.updateWebsite(websiteId, data)
     .then(ui.updateWebsiteSuccess) // if your request was succesful
-    .then(() => onGetAllWebsites(event)) // if your request was succesful
+    // .then(() => onGetAllWebsites(event)) // if your request was succesful
     .catch(ui.updateWebsiteFailure) // if your request failed
 }
 
