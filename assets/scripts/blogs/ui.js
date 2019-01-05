@@ -1,4 +1,5 @@
 const showBlogsTemplate = require('../templates/blog-listing.handlebars')
+const store = require('../store.js')
 
 const createBlogSuccess = data => {
   $('#create-blog-message').show().text('Successfully created a blog')
@@ -44,11 +45,18 @@ const updateBlogFailure = () => {
 }
 
 const getBlogSuccess = data => {
-  const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
-  $('.blog-content').html(showBlogsHtml)
-  $('.delete-blog-btn').css('visibility', 'visible')
-  $('.update-blog-btn').css('visibility', 'visible')
-  $('#snow').css('visibility', 'hidden')
+  store.count_blog += 1
+  // console.log(store.count)
+  if (store.count_blog % 2 === 0) {
+    const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
+    $('.blog-content').show()
+    $('.blog-content').html(showBlogsHtml)
+    $('.delete-blog-btn').css('visibility', 'visible')
+    $('.update-blog-btn').css('visibility', 'visible')
+    $('#snow').css('visibility', 'hidden')
+  } else {
+    $('.blog-content').hide()
+  }
 }
 
 const getBlogFailure = () => {
@@ -57,13 +65,19 @@ const getBlogFailure = () => {
 }
 
 const getBlogVisitorSuccess = data => {
-  const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
-  $('.blog-content').html(showBlogsHtml)
-  $('.delete-btn').css('visibility', 'hidden')
-  $('.update-btn').css('visibility', 'hidden')
-  $('#snow').css('visibility', 'hidden')
-  $('#holidays').css('visibility', 'hidden')
-  $('#team').css('visibility', 'hidden')
+  if (store.visitor_blog) {
+    const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
+    $('.blog-content').show()
+    $('.blog-content').html(showBlogsHtml)
+    $('.delete-btn').css('visibility', 'hidden')
+    $('.update-btn').css('visibility', 'hidden')
+    $('#snow').css('visibility', 'hidden')
+    $('#holidays').css('visibility', 'hidden')
+    $('#team').css('visibility', 'hidden')
+  } else {
+    $('.blog-content').hide()
+  }
+  store.visitor_blog = !store.visitor_blog
 }
 
 const getBlogVisitorFailure = () => {

@@ -86,6 +86,9 @@ const signOutSuccess = data => {
   $('.update-btn').css('visibility', 'hidden')
   $('.snowflakes').css('visibility', 'visible')
   $('#snow').css('visibility', 'visible')
+  setTimeout(function () {
+    $('#snow').css('visibility', 'hidden')
+  }, 10000)
 }
 
 const signOutFailure = () => { // removed error parameter
