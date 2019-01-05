@@ -24,9 +24,9 @@ After a user signs in to Sserpdrow they can create websites and blog posts.
 # Planning Docs
 
 Wireframe
-[Alt Wireframe](Wireframe.png?raw=true)
+![Alt Wireframe](Wireframe.png?raw=true)
 User Stories
-[Alt User Stories](User-Stories.png?raw=true)
+![Alt User Stories](User-Stories.png?raw=true)
 
 # Unsolved Problems
 In a future iteration of this app we would have included making CSS changes to websites such as allowing
