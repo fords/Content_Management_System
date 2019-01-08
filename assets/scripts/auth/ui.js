@@ -17,7 +17,8 @@ const signUpFailure = () => { // removed error parameter
 
 const signInSuccess = data => {
   store.user = data.user
-
+  store.count = 1
+  store.count_blog = 1
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
@@ -65,7 +66,8 @@ const changePasswordFailure = () => { // removed error parameter
 
 const signOutSuccess = data => {
   store.user = null
-
+  store.visitor_web = true
+  store.visitor_blog = true
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
   // $('.current-player').hide()
@@ -78,6 +80,8 @@ const signOutSuccess = data => {
   $('#optionsModal').modal('hide') // closes modal after success
   $('.shown-website').css('visibility', 'hidden')
   $('.shown-blog').css('visibility', 'hidden')
+  $('.website-content').hide()
+  $('.blog-content').hide()
   $('#show-all-blogs').css('visibility', 'hidden')
   $('#show-all-websites').css('visibility', 'hidden')
   $('#show-all-blogs-beforeLogIn').css('visibility', 'visible')
