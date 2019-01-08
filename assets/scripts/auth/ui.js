@@ -92,7 +92,7 @@ const signOutSuccess = data => {
   $('#snow').css('visibility', 'visible')
   setTimeout(function () {
     $('#snow').css('visibility', 'hidden')
-  }, 10000)
+  }, 4000)
 }
 
 const signOutFailure = () => { // removed error parameter
