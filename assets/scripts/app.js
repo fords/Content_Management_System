@@ -36,4 +36,6 @@ $(() => {
   setTimeout(function () {
     $('#snow').css('visibility', 'hidden')
   }, 10000)
+  $('#team').fadeOut(2000)
+  $('#holidays').fadeOut(2000)
 })
