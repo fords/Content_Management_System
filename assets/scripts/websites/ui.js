@@ -46,15 +46,20 @@ const updateWebsiteFailure = () => {
 
 const getWebsiteSuccess = data => {
   store.count += 1
-  // console.log(store.count)
   if (store.count % 2 === 0) {
-    const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
-
-    $('.website-content').html(showWebsitesHtml)
-    $('.website-content').show()
-    $('.delete-website-btn').css('visibility', 'visible')
-    $('.update-website-btn').css('visibility', 'visible')
-    $('#snow').css('visibility', 'hidden')
+    const userWebsites = []
+    data.websites.forEach((website) => {
+      if (website.owner !== store.user._id) {
+      } else {
+        userWebsites.push(website)
+        const showWebsitesHtml = showWebsitesTemplate({websites: userWebsites})
+        $('.website-content').html(showWebsitesHtml)
+        $('.website-content').show()
+        $('.delete-website-btn').css('visibility', 'visible')
+        $('.update-website-btn').css('visibility', 'visible')
+        $('#snow').css('visibility', 'hidden')
+      }
+    })
   } else {
     $('.website-content').hide()
   }
