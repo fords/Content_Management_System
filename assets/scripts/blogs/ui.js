@@ -46,14 +46,20 @@ const updateBlogFailure = () => {
 
 const getBlogSuccess = data => {
   store.count_blog += 1
-  // console.log(store.count)
   if (store.count_blog % 2 === 0) {
-    const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
-    $('.blog-content').show()
-    $('.blog-content').html(showBlogsHtml)
-    $('.delete-blog-btn').css('visibility', 'visible')
-    $('.update-blog-btn').css('visibility', 'visible')
-    $('#snow').css('visibility', 'hidden')
+    const userBlogs = []
+    data.blogs.forEach((blog) => {
+      if (blog.owner !== store.user._id) {
+      } else {
+        userBlogs.push(blog)
+        const showBlogsHtml = showBlogsTemplate({blogs: userBlogs})
+        $('.blog-content').show()
+        $('.blog-content').html(showBlogsHtml)
+        $('.delete-blog-btn').css('visibility', 'visible')
+        $('.update-blog-btn').css('visibility', 'visible')
+        $('#snow').css('visibility', 'hidden')
+      }
+    })
   } else {
     $('.blog-content').hide()
   }
