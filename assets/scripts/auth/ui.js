@@ -19,6 +19,8 @@ const signInSuccess = data => {
   store.user = data.user
   store.count = 1
   store.count_blog = 1
+  document.getElementById('show-all-websites').value = 'Show Websites'
+  document.getElementById('show-all-blogs').value = 'Show Blogs'
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
