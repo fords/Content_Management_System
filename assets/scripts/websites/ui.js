@@ -47,6 +47,7 @@ const updateWebsiteFailure = () => {
 const getWebsiteSuccess = data => {
   store.count += 1
   if (store.count % 2 === 0) {
+    document.getElementById('show-all-websites').value = 'Hide Websites'
     const userWebsites = []
     data.websites.forEach((website) => {
       if (website.owner !== store.user._id) {
@@ -61,6 +62,7 @@ const getWebsiteSuccess = data => {
       }
     })
   } else {
+    document.getElementById('show-all-websites').value = 'Show Websites'
     $('.website-content').hide()
   }
 }
