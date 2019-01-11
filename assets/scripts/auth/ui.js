@@ -63,8 +63,7 @@ const changePasswordFailure = () => { // removed error parameter
   $('#out-message').show().text('Error on password change')
   $('#out-message').removeClass()
   $('#out-message').addClass('failure')
-  // removed console.error
-  $('#out-message').fadeOut(9000)
+  $('#out-message').fadeOut(4000)
 }
 
 const signOutSuccess = data => {
