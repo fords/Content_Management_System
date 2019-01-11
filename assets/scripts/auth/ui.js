@@ -69,6 +69,8 @@ const signOutSuccess = data => {
   store.user = null
   store.visitor_web = true
   store.visitor_blog = true
+  document.getElementById('show-all-websites-beforeLogIn').value = 'Show Websites'
+  document.getElementById('show-all-blogs-beforeLogIn').value = 'Show Blogs'
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
   // $('.current-player').hide()
