@@ -84,7 +84,6 @@ const getWebsiteVisitorSuccess = data => {
   } else {
     document.getElementById('show-all-websites-beforeLogIn').value = 'Show Websites'
     $('.website-content').hide()
-
   }
   store.visitor_web = !store.visitor_web
 }
