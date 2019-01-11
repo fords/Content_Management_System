@@ -30,7 +30,7 @@ const onChangePassword = event => {
   $(event.target).trigger('reset')
   api.changePassword(data)
     .then(ui.changePasswordSuccess) // if your request was succesful
-    .catch(ui.failure) // if your request failed
+    .catch(ui.changePasswordFailure) // if your request failed
 }
 
 module.exports = {

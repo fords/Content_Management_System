@@ -19,6 +19,8 @@ const signInSuccess = data => {
   store.user = data.user
   store.count = 1
   store.count_blog = 1
+  document.getElementById('show-all-websites').value = 'Show Websites'
+  document.getElementById('show-all-blogs').value = 'Show Blogs'
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
@@ -61,14 +63,15 @@ const changePasswordFailure = () => { // removed error parameter
   $('#out-message').show().text('Error on password change')
   $('#out-message').removeClass()
   $('#out-message').addClass('failure')
-  // removed console.error
-  $('#out-message').fadeOut(9000)
+  $('#out-message').fadeOut(4000)
 }
 
 const signOutSuccess = data => {
   store.user = null
   store.visitor_web = true
   store.visitor_blog = true
+  document.getElementById('show-all-websites-beforeLogIn').value = 'Show Websites'
+  document.getElementById('show-all-blogs-beforeLogIn').value = 'Show Blogs'
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
   // $('.current-player').hide()

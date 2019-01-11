@@ -47,6 +47,7 @@ const updateBlogFailure = () => {
 const getBlogSuccess = data => {
   store.count_blog += 1
   if (store.count_blog % 2 === 0) {
+    document.getElementById('show-all-blogs').value = 'Hide Blogs'
     const userBlogs = []
     data.blogs.forEach((blog) => {
       if (blog.owner !== store.user._id) {
@@ -61,6 +62,7 @@ const getBlogSuccess = data => {
       }
     })
   } else {
+    document.getElementById('show-all-blogs').value = 'Show Blogs'
     $('.blog-content').hide()
   }
 }
@@ -72,6 +74,7 @@ const getBlogFailure = () => {
 
 const getBlogVisitorSuccess = data => {
   if (store.visitor_blog) {
+    document.getElementById('show-all-blogs-beforeLogIn').value = 'Hide Blogs'
     const showBlogsHtml = showBlogsTemplate({blogs: data.blogs})
     $('.blog-content').show()
     $('.blog-content').html(showBlogsHtml)
@@ -81,6 +84,7 @@ const getBlogVisitorSuccess = data => {
     $('#holidays').css('visibility', 'hidden')
     $('#team').css('visibility', 'hidden')
   } else {
+    document.getElementById('show-all-blogs-beforeLogIn').value = 'Show Blogs'
     $('.blog-content').hide()
   }
   store.visitor_blog = !store.visitor_blog
