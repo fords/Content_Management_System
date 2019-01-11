@@ -72,6 +72,7 @@ const getWebsiteFailure = () => {
 
 const getWebsiteVisitorSuccess = data => {
   if (store.visitor_web) {
+    document.getElementById('show-all-websites-beforeLogIn').value = 'Hide Websites'
     const showWebsitesHtml = showWebsitesTemplate({websites: data.websites})
     $('.website-content').show()
     $('.website-content').html(showWebsitesHtml)
@@ -81,7 +82,9 @@ const getWebsiteVisitorSuccess = data => {
     $('#holidays').css('visibility', 'hidden')
     $('#team').css('visibility', 'hidden')
   } else {
+    document.getElementById('show-all-websites-beforeLogIn').value = 'Show Websites'
     $('.website-content').hide()
+
   }
   store.visitor_web = !store.visitor_web
 }
