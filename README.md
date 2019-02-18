@@ -6,8 +6,6 @@ You can sign up and sign in using any dummy email address even such as 1@1.1 and
 
 <strong>Note that since Database is stored in free version of Heroku, action such as  sign up, sign in, show websites and show blogs can take up to 10 seconds. Please be patient when the request is waking up the server.</strong>
 
- <strong>Note that since Database is stored in free version of Heroku, sign up and sign in action can take up to 10 seconds. Please be patient when the request is waking up server.</strong>
-
 
 # Team Prompt :
 Build an application for Swedish web-conglomerate Sserpdrow! Your application's "users" will be companies/organizations that want to have their own company blog and web pages and they are going to use your application to CRUD their own "blog posts" and "web pages". When a user logs in, they should see a dashboard that lets them CRUD their "blog posts" and "web pages". Your application will also likely have “visitors” that just go to your site and want to consume (read) the content that your “users” (companies/organizations) have provided. When a "visitor" goes to your site, they should be shown a list of companies/organizations to view.
