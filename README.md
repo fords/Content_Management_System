@@ -1,5 +1,10 @@
 ### SSERPDROW
 The project is creating an application where users(companies/organizations)can create web pages and blogposts. Visitors can view all web pages and blog posts for all companies without logging in.
+</br> 
+
+You can sign up and sign in using any dummy email address even such as 1@1.1 and any password. </br>
+
+<strong>Note that since Database is stored in free version of Heroku, action such as  sign up, sign in, show websites and show blogs can take up to 10 seconds. Please be patient when the request is waking up the server.</strong>
 
  <strong>Note that since Database is stored in free version of Heroku, sign up and sign in action can take up to 10 seconds. Please be patient when the request is waking up server.</strong>
 
